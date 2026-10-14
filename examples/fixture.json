@@ -1,0 +1,1010 @@
+{
+  "users": [
+    {
+      "user_id": "u00",
+      "signup_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "user_id": "u01",
+      "signup_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "user_id": "u02",
+      "signup_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "user_id": "u03",
+      "signup_at": "2026-01-02T00:00:00Z"
+    },
+    {
+      "user_id": "u04",
+      "signup_at": "2026-01-02T00:00:00Z"
+    },
+    {
+      "user_id": "u05",
+      "signup_at": "2026-01-02T00:00:00Z"
+    },
+    {
+      "user_id": "u06",
+      "signup_at": "2026-01-03T00:00:00Z"
+    },
+    {
+      "user_id": "u07",
+      "signup_at": "2026-01-03T00:00:00Z"
+    },
+    {
+      "user_id": "u08",
+      "signup_at": "2026-01-03T00:00:00Z"
+    },
+    {
+      "user_id": "u09",
+      "signup_at": "2026-01-04T00:00:00Z"
+    },
+    {
+      "user_id": "u10",
+      "signup_at": "2026-01-04T00:00:00Z"
+    },
+    {
+      "user_id": "u11",
+      "signup_at": "2026-01-04T00:00:00Z"
+    }
+  ],
+  "logins": [
+    {
+      "event_id": "l0-0",
+      "user_id": "u00",
+      "occurred_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "event_id": "l0-1",
+      "user_id": "u00",
+      "occurred_at": "2026-01-02T09:00:00Z"
+    },
+    {
+      "event_id": "l0-3",
+      "user_id": "u00",
+      "occurred_at": "2026-01-04T09:00:00Z"
+    },
+    {
+      "event_id": "l0-4",
+      "user_id": "u00",
+      "occurred_at": "2026-01-05T09:00:00Z"
+    },
+    {
+      "event_id": "l0-5",
+      "user_id": "u00",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l0-6",
+      "user_id": "u00",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l0-7",
+      "user_id": "u00",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l0-8",
+      "user_id": "u00",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l0-9",
+      "user_id": "u00",
+      "occurred_at": "2026-01-10T09:00:00Z"
+    },
+    {
+      "event_id": "l0-10",
+      "user_id": "u00",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l0-11",
+      "user_id": "u00",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l0-12",
+      "user_id": "u00",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l1-2",
+      "user_id": "u01",
+      "occurred_at": "2026-01-03T09:00:00Z"
+    },
+    {
+      "event_id": "l1-3",
+      "user_id": "u01",
+      "occurred_at": "2026-01-04T09:00:00Z"
+    },
+    {
+      "event_id": "l1-4",
+      "user_id": "u01",
+      "occurred_at": "2026-01-05T09:00:00Z"
+    },
+    {
+      "event_id": "l1-5",
+      "user_id": "u01",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l1-6",
+      "user_id": "u01",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l1-7",
+      "user_id": "u01",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l1-8",
+      "user_id": "u01",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l1-9",
+      "user_id": "u01",
+      "occurred_at": "2026-01-10T09:00:00Z"
+    },
+    {
+      "event_id": "l1-10",
+      "user_id": "u01",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l1-11",
+      "user_id": "u01",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l1-12",
+      "user_id": "u01",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l2-0",
+      "user_id": "u02",
+      "occurred_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "event_id": "l2-1",
+      "user_id": "u02",
+      "occurred_at": "2026-01-02T09:00:00Z"
+    },
+    {
+      "event_id": "l2-2",
+      "user_id": "u02",
+      "occurred_at": "2026-01-03T09:00:00Z"
+    },
+    {
+      "event_id": "l2-3",
+      "user_id": "u02",
+      "occurred_at": "2026-01-04T09:00:00Z"
+    },
+    {
+      "event_id": "l2-5",
+      "user_id": "u02",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l2-7",
+      "user_id": "u02",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l2-8",
+      "user_id": "u02",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l2-10",
+      "user_id": "u02",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l2-12",
+      "user_id": "u02",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l2-13",
+      "user_id": "u02",
+      "occurred_at": "2026-01-14T09:00:00Z"
+    },
+    {
+      "event_id": "l3-1",
+      "user_id": "u03",
+      "occurred_at": "2026-01-02T09:00:00Z"
+    },
+    {
+      "event_id": "l3-3",
+      "user_id": "u03",
+      "occurred_at": "2026-01-04T09:00:00Z"
+    },
+    {
+      "event_id": "l3-4",
+      "user_id": "u03",
+      "occurred_at": "2026-01-05T09:00:00Z"
+    },
+    {
+      "event_id": "l3-5",
+      "user_id": "u03",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l3-6",
+      "user_id": "u03",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l3-7",
+      "user_id": "u03",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l3-9",
+      "user_id": "u03",
+      "occurred_at": "2026-01-10T09:00:00Z"
+    },
+    {
+      "event_id": "l3-10",
+      "user_id": "u03",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l3-11",
+      "user_id": "u03",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l3-12",
+      "user_id": "u03",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l4-1",
+      "user_id": "u04",
+      "occurred_at": "2026-01-02T09:00:00Z"
+    },
+    {
+      "event_id": "l4-4",
+      "user_id": "u04",
+      "occurred_at": "2026-01-05T09:00:00Z"
+    },
+    {
+      "event_id": "l4-6",
+      "user_id": "u04",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l4-8",
+      "user_id": "u04",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l4-9",
+      "user_id": "u04",
+      "occurred_at": "2026-01-10T09:00:00Z"
+    },
+    {
+      "event_id": "l4-10",
+      "user_id": "u04",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l4-13",
+      "user_id": "u04",
+      "occurred_at": "2026-01-14T09:00:00Z"
+    },
+    {
+      "event_id": "l5-2",
+      "user_id": "u05",
+      "occurred_at": "2026-01-03T09:00:00Z"
+    },
+    {
+      "event_id": "l5-7",
+      "user_id": "u05",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l5-8",
+      "user_id": "u05",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l5-10",
+      "user_id": "u05",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l5-11",
+      "user_id": "u05",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l5-12",
+      "user_id": "u05",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l5-13",
+      "user_id": "u05",
+      "occurred_at": "2026-01-14T09:00:00Z"
+    },
+    {
+      "event_id": "l6-2",
+      "user_id": "u06",
+      "occurred_at": "2026-01-03T09:00:00Z"
+    },
+    {
+      "event_id": "l6-4",
+      "user_id": "u06",
+      "occurred_at": "2026-01-05T09:00:00Z"
+    },
+    {
+      "event_id": "l6-5",
+      "user_id": "u06",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l6-6",
+      "user_id": "u06",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l6-8",
+      "user_id": "u06",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l6-9",
+      "user_id": "u06",
+      "occurred_at": "2026-01-10T09:00:00Z"
+    },
+    {
+      "event_id": "l6-10",
+      "user_id": "u06",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l7-5",
+      "user_id": "u07",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l7-6",
+      "user_id": "u07",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l7-7",
+      "user_id": "u07",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l7-8",
+      "user_id": "u07",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l7-10",
+      "user_id": "u07",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l7-12",
+      "user_id": "u07",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l7-13",
+      "user_id": "u07",
+      "occurred_at": "2026-01-14T09:00:00Z"
+    },
+    {
+      "event_id": "l8-2",
+      "user_id": "u08",
+      "occurred_at": "2026-01-03T09:00:00Z"
+    },
+    {
+      "event_id": "l8-3",
+      "user_id": "u08",
+      "occurred_at": "2026-01-04T09:00:00Z"
+    },
+    {
+      "event_id": "l8-5",
+      "user_id": "u08",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l8-6",
+      "user_id": "u08",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l8-11",
+      "user_id": "u08",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l9-4",
+      "user_id": "u09",
+      "occurred_at": "2026-01-05T09:00:00Z"
+    },
+    {
+      "event_id": "l9-5",
+      "user_id": "u09",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l9-6",
+      "user_id": "u09",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l9-7",
+      "user_id": "u09",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l9-8",
+      "user_id": "u09",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l9-9",
+      "user_id": "u09",
+      "occurred_at": "2026-01-10T09:00:00Z"
+    },
+    {
+      "event_id": "l9-11",
+      "user_id": "u09",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l9-12",
+      "user_id": "u09",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l10-3",
+      "user_id": "u10",
+      "occurred_at": "2026-01-04T09:00:00Z"
+    },
+    {
+      "event_id": "l10-4",
+      "user_id": "u10",
+      "occurred_at": "2026-01-05T09:00:00Z"
+    },
+    {
+      "event_id": "l10-5",
+      "user_id": "u10",
+      "occurred_at": "2026-01-06T09:00:00Z"
+    },
+    {
+      "event_id": "l10-6",
+      "user_id": "u10",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l10-7",
+      "user_id": "u10",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l10-10",
+      "user_id": "u10",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l10-11",
+      "user_id": "u10",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l10-12",
+      "user_id": "u10",
+      "occurred_at": "2026-01-13T09:00:00Z"
+    },
+    {
+      "event_id": "l10-13",
+      "user_id": "u10",
+      "occurred_at": "2026-01-14T09:00:00Z"
+    },
+    {
+      "event_id": "l11-3",
+      "user_id": "u11",
+      "occurred_at": "2026-01-04T09:00:00Z"
+    },
+    {
+      "event_id": "l11-6",
+      "user_id": "u11",
+      "occurred_at": "2026-01-07T09:00:00Z"
+    },
+    {
+      "event_id": "l11-7",
+      "user_id": "u11",
+      "occurred_at": "2026-01-08T09:00:00Z"
+    },
+    {
+      "event_id": "l11-8",
+      "user_id": "u11",
+      "occurred_at": "2026-01-09T09:00:00Z"
+    },
+    {
+      "event_id": "l11-9",
+      "user_id": "u11",
+      "occurred_at": "2026-01-10T09:00:00Z"
+    },
+    {
+      "event_id": "l11-10",
+      "user_id": "u11",
+      "occurred_at": "2026-01-11T09:00:00Z"
+    },
+    {
+      "event_id": "l11-11",
+      "user_id": "u11",
+      "occurred_at": "2026-01-12T09:00:00Z"
+    },
+    {
+      "event_id": "l11-13",
+      "user_id": "u11",
+      "occurred_at": "2026-01-14T09:00:00Z"
+    },
+    {
+      "event_id": "l0-0",
+      "user_id": "u00",
+      "occurred_at": "2026-01-01T09:00:00Z"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "m4",
+      "started_at": "2026-01-05T12:00:00Z",
+      "duration_seconds": 900
+    },
+    {
+      "match_id": "m5",
+      "started_at": "2026-01-06T12:00:00Z",
+      "duration_seconds": 1090
+    },
+    {
+      "match_id": "m6",
+      "started_at": "2026-01-07T12:00:00Z",
+      "duration_seconds": 1051
+    },
+    {
+      "match_id": "m7",
+      "started_at": "2026-01-08T12:00:00Z",
+      "duration_seconds": 1579
+    },
+    {
+      "match_id": "m8",
+      "started_at": "2026-01-09T12:00:00Z",
+      "duration_seconds": 1317
+    },
+    {
+      "match_id": "m9",
+      "started_at": "2026-01-10T12:00:00Z",
+      "duration_seconds": 1267
+    },
+    {
+      "match_id": "m10",
+      "started_at": "2026-01-11T12:00:00Z",
+      "duration_seconds": 975
+    },
+    {
+      "match_id": "m11",
+      "started_at": "2026-01-12T12:00:00Z",
+      "duration_seconds": 1167
+    },
+    {
+      "match_id": "m12",
+      "started_at": "2026-01-13T12:00:00Z",
+      "duration_seconds": 1639
+    },
+    {
+      "match_id": "m13",
+      "started_at": "2026-01-14T12:00:00Z",
+      "duration_seconds": 850
+    }
+  ],
+  "participants": [
+    {
+      "match_id": "m4",
+      "user_id": "u00",
+      "hero": "Stone",
+      "won": true,
+      "kills": 8,
+      "deaths": 0,
+      "assists": 16
+    },
+    {
+      "match_id": "m4",
+      "user_id": "u03",
+      "hero": "Tide",
+      "won": true,
+      "kills": 10,
+      "deaths": 1,
+      "assists": 8
+    },
+    {
+      "match_id": "m4",
+      "user_id": "u08",
+      "hero": "Stone",
+      "won": false,
+      "kills": 5,
+      "deaths": 2,
+      "assists": 11
+    },
+    {
+      "match_id": "m4",
+      "user_id": "u05",
+      "hero": "Ember",
+      "won": false,
+      "kills": 8,
+      "deaths": 8,
+      "assists": 16
+    },
+    {
+      "match_id": "m5",
+      "user_id": "u05",
+      "hero": "Tide",
+      "won": true,
+      "kills": 11,
+      "deaths": 3,
+      "assists": 6
+    },
+    {
+      "match_id": "m5",
+      "user_id": "u10",
+      "hero": "Stone",
+      "won": true,
+      "kills": 7,
+      "deaths": 5,
+      "assists": 0
+    },
+    {
+      "match_id": "m5",
+      "user_id": "u03",
+      "hero": "Ember",
+      "won": false,
+      "kills": 12,
+      "deaths": 4,
+      "assists": 15
+    },
+    {
+      "match_id": "m5",
+      "user_id": "u09",
+      "hero": "Tide",
+      "won": false,
+      "kills": 3,
+      "deaths": 9,
+      "assists": 11
+    },
+    {
+      "match_id": "m6",
+      "user_id": "u07",
+      "hero": "Ember",
+      "won": true,
+      "kills": 3,
+      "deaths": 7,
+      "assists": 6
+    },
+    {
+      "match_id": "m6",
+      "user_id": "u05",
+      "hero": "Tide",
+      "won": true,
+      "kills": 3,
+      "deaths": 7,
+      "assists": 19
+    },
+    {
+      "match_id": "m6",
+      "user_id": "u10",
+      "hero": "Stone",
+      "won": false,
+      "kills": 0,
+      "deaths": 7,
+      "assists": 20
+    },
+    {
+      "match_id": "m6",
+      "user_id": "u01",
+      "hero": "Tide",
+      "won": false,
+      "kills": 12,
+      "deaths": 10,
+      "assists": 2
+    },
+    {
+      "match_id": "m7",
+      "user_id": "u10",
+      "hero": "Ember",
+      "won": true,
+      "kills": 6,
+      "deaths": 10,
+      "assists": 10
+    },
+    {
+      "match_id": "m7",
+      "user_id": "u01",
+      "hero": "Ember",
+      "won": true,
+      "kills": 12,
+      "deaths": 6,
+      "assists": 14
+    },
+    {
+      "match_id": "m7",
+      "user_id": "u06",
+      "hero": "Tide",
+      "won": false,
+      "kills": 11,
+      "deaths": 1,
+      "assists": 5
+    },
+    {
+      "match_id": "m7",
+      "user_id": "u03",
+      "hero": "Ember",
+      "won": false,
+      "kills": 2,
+      "deaths": 0,
+      "assists": 4
+    },
+    {
+      "match_id": "m8",
+      "user_id": "u09",
+      "hero": "Ember",
+      "won": true,
+      "kills": 8,
+      "deaths": 8,
+      "assists": 4
+    },
+    {
+      "match_id": "m8",
+      "user_id": "u07",
+      "hero": "Ember",
+      "won": true,
+      "kills": 0,
+      "deaths": 10,
+      "assists": 3
+    },
+    {
+      "match_id": "m8",
+      "user_id": "u02",
+      "hero": "Stone",
+      "won": false,
+      "kills": 11,
+      "deaths": 2,
+      "assists": 13
+    },
+    {
+      "match_id": "m8",
+      "user_id": "u10",
+      "hero": "Ember",
+      "won": false,
+      "kills": 3,
+      "deaths": 0,
+      "assists": 8
+    },
+    {
+      "match_id": "m9",
+      "user_id": "u03",
+      "hero": "Tide",
+      "won": true,
+      "kills": 8,
+      "deaths": 6,
+      "assists": 4
+    },
+    {
+      "match_id": "m9",
+      "user_id": "u04",
+      "hero": "Ember",
+      "won": true,
+      "kills": 11,
+      "deaths": 5,
+      "assists": 14
+    },
+    {
+      "match_id": "m9",
+      "user_id": "u08",
+      "hero": "Stone",
+      "won": false,
+      "kills": 9,
+      "deaths": 8,
+      "assists": 13
+    },
+    {
+      "match_id": "m9",
+      "user_id": "u11",
+      "hero": "Stone",
+      "won": false,
+      "kills": 2,
+      "deaths": 8,
+      "assists": 4
+    },
+    {
+      "match_id": "m10",
+      "user_id": "u08",
+      "hero": "Stone",
+      "won": true,
+      "kills": 0,
+      "deaths": 2,
+      "assists": 5
+    },
+    {
+      "match_id": "m10",
+      "user_id": "u11",
+      "hero": "Ember",
+      "won": true,
+      "kills": 7,
+      "deaths": 9,
+      "assists": 3
+    },
+    {
+      "match_id": "m10",
+      "user_id": "u00",
+      "hero": "Stone",
+      "won": false,
+      "kills": 0,
+      "deaths": 5,
+      "assists": 16
+    },
+    {
+      "match_id": "m10",
+      "user_id": "u07",
+      "hero": "Stone",
+      "won": false,
+      "kills": 8,
+      "deaths": 7,
+      "assists": 3
+    },
+    {
+      "match_id": "m11",
+      "user_id": "u08",
+      "hero": "Ember",
+      "won": true,
+      "kills": 12,
+      "deaths": 1,
+      "assists": 16
+    },
+    {
+      "match_id": "m11",
+      "user_id": "u00",
+      "hero": "Tide",
+      "won": true,
+      "kills": 8,
+      "deaths": 0,
+      "assists": 2
+    },
+    {
+      "match_id": "m11",
+      "user_id": "u03",
+      "hero": "Tide",
+      "won": false,
+      "kills": 5,
+      "deaths": 9,
+      "assists": 16
+    },
+    {
+      "match_id": "m11",
+      "user_id": "u09",
+      "hero": "Stone",
+      "won": false,
+      "kills": 8,
+      "deaths": 3,
+      "assists": 8
+    },
+    {
+      "match_id": "m12",
+      "user_id": "u07",
+      "hero": "Ember",
+      "won": true,
+      "kills": 11,
+      "deaths": 8,
+      "assists": 8
+    },
+    {
+      "match_id": "m12",
+      "user_id": "u08",
+      "hero": "Stone",
+      "won": true,
+      "kills": 3,
+      "deaths": 7,
+      "assists": 4
+    },
+    {
+      "match_id": "m12",
+      "user_id": "u10",
+      "hero": "Tide",
+      "won": false,
+      "kills": 1,
+      "deaths": 6,
+      "assists": 14
+    },
+    {
+      "match_id": "m12",
+      "user_id": "u11",
+      "hero": "Tide",
+      "won": false,
+      "kills": 1,
+      "deaths": 10,
+      "assists": 7
+    },
+    {
+      "match_id": "m13",
+      "user_id": "u06",
+      "hero": "Ember",
+      "won": true,
+      "kills": 11,
+      "deaths": 10,
+      "assists": 11
+    },
+    {
+      "match_id": "m13",
+      "user_id": "u01",
+      "hero": "Ember",
+      "won": true,
+      "kills": 4,
+      "deaths": 2,
+      "assists": 14
+    },
+    {
+      "match_id": "m13",
+      "user_id": "u03",
+      "hero": "Ember",
+      "won": false,
+      "kills": 11,
+      "deaths": 1,
+      "assists": 12
+    },
+    {
+      "match_id": "m13",
+      "user_id": "u04",
+      "hero": "Tide",
+      "won": false,
+      "kills": 2,
+      "deaths": 10,
+      "assists": 7
+    }
+  ],
+  "payments": [
+    {
+      "payment_id": "p0",
+      "user_id": "u00",
+      "occurred_at": "2026-01-02T14:00:00Z",
+      "amount_cents": 199
+    },
+    {
+      "payment_id": "p3",
+      "user_id": "u03",
+      "occurred_at": "2026-01-03T14:00:00Z",
+      "amount_cents": 499
+    },
+    {
+      "payment_id": "p6",
+      "user_id": "u06",
+      "occurred_at": "2026-01-04T14:00:00Z",
+      "amount_cents": 499
+    },
+    {
+      "payment_id": "p9",
+      "user_id": "u09",
+      "occurred_at": "2026-01-05T14:00:00Z",
+      "amount_cents": 199
+    },
+    {
+      "payment_id": "p0",
+      "user_id": "u00",
+      "occurred_at": "2026-01-02T14:00:00Z",
+      "amount_cents": 199
+    }
+  ]
+}

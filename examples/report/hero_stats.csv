@@ -1,0 +1,4 @@
+hero,player_matches,distinct_matches,wins,win_rate,kills,deaths,assists
+Ember,16,10,11,0.6875,121,89,158
+Stone,12,8,4,0.3333333333333333,61,56,113
+Tide,12,8,5,0.4166666666666667,75,72,101

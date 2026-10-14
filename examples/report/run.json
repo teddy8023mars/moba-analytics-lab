@@ -1,0 +1,12 @@
+{
+  "as_of_utc": "2026-01-14",
+  "synthetic": true,
+  "rows": {
+    "user_day": 101,
+    "dau": 14,
+    "retention": 8,
+    "hero_stats": 3,
+    "player_stats": 12,
+    "monetization": 4
+  }
+}

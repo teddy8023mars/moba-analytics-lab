@@ -1,0 +1,1 @@
+The executable SQL source is `src/moba_lab/models.sql`. It ships inside the installed package so the CLI also works outside the repository. The SQL defines staging, user/day and player/match facts, and six exported marts. Keeping one canonical source avoids source/package drift.
