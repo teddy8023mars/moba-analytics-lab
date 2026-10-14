@@ -75,3 +75,7 @@ Use a fresh output folder: existing warehouse files are refused. Optional depend
 ## Measured local benchmark
 
 [Reproduce the benchmark and read its limits](docs/benchmark.md). Three fresh-process samples at 2,150 / 21,500 / 107,500 synthetic raw rows record every wall-clock duration and whole-process peak RSS. All samples validate independent workload totals; the original pipeline/model definitions are unchanged. A separate actual query plan illustrates 60 raw login records collapsing to 56 user-days. This evidence measures local full rebuilds, without production capacity or optimization claims.
+
+## Locate the measured bottleneck
+
+[Stage profiling](docs/stage-profile.md) records three fresh-process samples each at 1,000 and 5,000 synthetic users. Raw-table preparation/loading takes about 99% of measured wall time in this regular workload; SQL models are a separate measured stage. Optional `--profile-stages` keeps metric results and default output unchanged. This locates a region to investigate before claiming an optimization.

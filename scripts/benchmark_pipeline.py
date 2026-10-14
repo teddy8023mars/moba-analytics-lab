@@ -57,20 +57,24 @@ def check_metrics(metrics,users):
     return observed
 
 
-def sample(users):
+def sample(users, profile_stages=False):
     data=workload(users)
+    timings={} if profile_stages else None
     start=time.perf_counter()
-    metrics=run_pipeline(data,'2026-01-14')
+    metrics=run_pipeline(data,'2026-01-14',timings=timings)
     seconds=time.perf_counter()-start
     correctness=check_metrics(metrics,users)
     rss=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
     if sys.platform!='darwin':
         rss*=1024
-    return {'pid':os.getpid(),'seconds':seconds,'peak_process_rss_bytes':rss,
+    report={'pid':os.getpid(),'seconds':seconds,'peak_process_rss_bytes':rss,
             'input_rows':sum(len(v) for v in data.values()),'correctness':correctness}
+    if timings is not None:
+        report['stage_seconds']=timings
+    return report
 
 
-def benchmark(sizes,repeats):
+def benchmark(sizes,repeats,profile_stages=False):
     if type(repeats) is not int or not 1<=repeats<=10:
         raise ValueError('repeats must be between 1 and 10')
     if sys.platform not in ('darwin','linux'):
@@ -86,7 +90,7 @@ def benchmark(sizes,repeats):
     for users in sizes:
         samples=[]
         for _ in range(repeats):
-            result=subprocess.run([sys.executable,str(Path(__file__).resolve()),'--worker','--users',str(users)],
+            result=subprocess.run([sys.executable,str(Path(__file__).resolve()),'--worker','--users',str(users)] + (['--profile-stages'] if profile_stages else []),
                                   capture_output=True,text=True,timeout=180)
             if result.returncode:
                 raise RuntimeError(result.stderr or result.stdout)
@@ -105,15 +109,16 @@ if __name__=='__main__':
     parser.add_argument('--users',type=int,nargs='+',default=[100,1000,5000])
     parser.add_argument('--repeats',type=int,default=3)
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--profile-stages',action='store_true',help='record six full-pipeline stages per sample')
     parser.add_argument('--worker',action='store_true',help=argparse.SUPPRESS)
     args=parser.parse_args()
     try:
         if args.worker:
             if len(args.users)!=1:
                 raise ValueError('worker takes exactly one scale')
-            report=sample(args.users[0])
+            report=sample(args.users[0],args.profile_stages)
         else:
-            report=benchmark(args.users,args.repeats)
+            report=benchmark(args.users,args.repeats,args.profile_stages)
         text=json.dumps(report,indent=2)+'\n'
         if args.output:
             args.output.write_text(text)

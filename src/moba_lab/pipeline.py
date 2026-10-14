@@ -2,6 +2,7 @@
 from datetime import date, datetime, timezone
 from importlib.resources import files
 import duckdb
+from time import perf_counter
 
 SCHEMAS = {
     "users": [("user_id", "VARCHAR"), ("signup_at", "TIMESTAMPTZ")],
@@ -78,8 +79,23 @@ def _validated(data):
     return clean
 
 
-def run_pipeline(data: dict, as_of: str) -> dict[str, list[dict]]:
-    """as_of declares the last fully observed UTC day (inclusive)."""
+def run_pipeline(data: dict, as_of: str, *, timings: dict | None = None) -> dict[str, list[dict]]:
+    """as_of declares the last fully observed UTC day (inclusive).
+
+    Optional timings is replaced only after a successful full rebuild, including
+    connection close. Values are wall-clock seconds, not isolated CPU/SQL time.
+    """
+    if timings is not None and not isinstance(timings, dict):
+        raise ValueError("timings must be a dict or None")
+    stages = {}
+    started = previous = perf_counter() if timings is not None else 0
+
+    def mark(stage):
+        nonlocal previous
+        if timings is not None:
+            now = perf_counter()
+            stages[stage] = now - previous
+            previous = now
     try:
         cutoff = date.fromisoformat(as_of)
         if cutoff.isoformat() != as_of:
@@ -87,10 +103,12 @@ def run_pipeline(data: dict, as_of: str) -> dict[str, list[dict]]:
     except (ValueError, TypeError) as exc:
         raise ValueError("as-of must be YYYY-MM-DD") from exc
     clean = _validated(data)
+    mark("validation")
     with duckdb.connect(":memory:") as con:
         con.execute("SET TimeZone='UTC'")
         con.execute("CREATE TABLE observation(as_of DATE)")
         con.execute("INSERT INTO observation VALUES (?)", [cutoff])
+        mark("connection_setup")
         # Keep raw copies; staging SQL deduplicates exact repeats. Validation above
         # rejects conflicts rather than choosing an arbitrary winning version.
         for table, schema in SCHEMAS.items():
@@ -103,10 +121,18 @@ def run_pipeline(data: dict, as_of: str) -> dict[str, list[dict]]:
                 raw = [by_key[tuple(r[k] for k in KEYS[table])] for r in data[table]]
                 con.executemany(f"INSERT INTO raw_{table} VALUES ({','.join('?' for _ in schema)})",
                                 [tuple(r[f] for f, _ in schema) for r in raw])
+        mark("raw_load")
         con.execute(files("moba_lab").joinpath("models.sql").read_text())
+        mark("sql_models")
         result = {}
         for name in METRICS:
             cursor = con.execute(f"SELECT * FROM {name} ORDER BY 1, 2")
             columns = [c[0] for c in cursor.description]
             result[name] = [dict(zip(columns, (v.isoformat() if isinstance(v, date) else v for v in row))) for row in cursor.fetchall()]
-        return result
+        mark("result_fetch")
+    mark("connection_close")
+    if timings is not None:
+        stages["total"] = previous - started
+        timings.clear()
+        timings.update(stages)
+    return result
