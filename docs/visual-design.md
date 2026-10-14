@@ -1,0 +1,13 @@
+# Recorded result explorer
+
+Acceptance: show the project in seconds, using a navy / teal / amber dashboard with four clear KPI cards, DAU chart, D1/D7 cohort heatmap, hero bars and revenue chart. The desktop layout uses two columns; below 900px it becomes one column. Below 480px spacing and labels shrink while native controls remain usable.
+
+Data: `scripts/build_showcase.py` reads the checked-in `examples/fixture.json` and calls the canonical `run_pipeline` for each complete UTC day from Jan 01 through Jan 14. The JSON and embedded HTML payload contain those actual snapshots. Changing the observation day selects a recorded pipeline result, not a forecast or live event stream. DAU and revenue charts explicitly fill dates without events with zero within the complete observation window. Signup cohorts and observed denominator values come from the fixture and pipeline. N/A cells use null rather than zero and a hatched appearance. The full fixture has only four early signup cohorts, so choose Jan 08 to reveal D7 censoring.
+
+Controls: native selects support Tab, arrow keys and Enter. Observation changes all panels; the activity view and hero measure controls change the chart encoding. Data-table disclosures make chart values available in text. Charts have accessible descriptions. Hovering SVG bars exposes each day's value. Links point to the repository, canonical SQL, JSON and preview.
+
+Verification: exporter tests compare every recorded snapshot against the canonical pipeline, check cutoff eligibility and null N/A cells, distinguish observed zero retention using a no-login input, verify embedded JSON matches the companion file and confirm deterministic SVG export. Existing pipeline tests still exercise independent hand-calculated expected values. Browser acceptance should confirm desktop / mobile layout, observation Jan 08 N/A cells, hero toggles, activity toggle and keyboard focus. Coordinator performs browser QA before publication.
+
+Scope: AI-assisted educational work, fictional fixture and currency. No real-time status, invented benchmark, employer implementation or business-impact claim. Cents and currency units are labeled; retention is exact-day, not rolling; participant and payment grains remain separate.
+
+Coordinator browser QA: real controls exercised against served docs/. MOBA observation cutoffs and N/A cells, incremental rollback/retry/replay snapshots, and quality clean/dirty/check selection were inspected in the browser as applicable. Screenshots inspected for visual defects. Exporter and entire suite rerun by coordinator before publication. No claim of mobile-browser or all-platform validation.

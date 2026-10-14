@@ -1,0 +1,6126 @@
+{
+  "synthetic": true,
+  "source": "examples/fixture.json",
+  "source_sha256": "50a5e5c2330265011c8b48fc7843db7035af58ef11f6e836f7c5484f051d13db",
+  "as_of_utc": "2026-01-14",
+  "start_utc": "2026-01-01",
+  "currency": "fictional single currency; 100 cents = 1 unit",
+  "counts": {
+    "users": {
+      "raw": 12,
+      "unique": 12
+    },
+    "logins": {
+      "raw": 102,
+      "unique": 101
+    },
+    "matches": {
+      "raw": 10,
+      "unique": 10
+    },
+    "participants": {
+      "raw": 40,
+      "unique": 40
+    },
+    "payments": {
+      "raw": 5,
+      "unique": 4
+    }
+  },
+  "snapshots": {
+    "2026-01-01": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          }
+        ],
+        "retention": [],
+        "hero_stats": [],
+        "player_stats": [],
+        "monetization": []
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 3
+    },
+    "2026-01-02": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [],
+        "player_stats": [],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 6
+    },
+    "2026-01-03": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          }
+        ],
+        "hero_stats": [],
+        "player_stats": [],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 9
+    },
+    "2026-01-04": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          }
+        ],
+        "hero_stats": [],
+        "player_stats": [],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-05": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 1,
+            "distinct_matches": 1,
+            "wins": 0,
+            "win_rate": 0.0,
+            "kills": 8,
+            "deaths": 8,
+            "assists": 16
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 2,
+            "distinct_matches": 1,
+            "wins": 1,
+            "win_rate": 0.5,
+            "kills": 13,
+            "deaths": 2,
+            "assists": 27
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 1,
+            "distinct_matches": 1,
+            "wins": 1,
+            "win_rate": 1.0,
+            "kills": 10,
+            "deaths": 1,
+            "assists": 8
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 8,
+            "deaths": 0,
+            "assists": 16
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 10,
+            "deaths": 1,
+            "assists": 8
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 8,
+            "deaths": 8,
+            "assists": 16
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 5,
+            "deaths": 2,
+            "assists": 11
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-06": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 2,
+            "distinct_matches": 2,
+            "wins": 0,
+            "win_rate": 0.0,
+            "kills": 20,
+            "deaths": 12,
+            "assists": 31
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 3,
+            "distinct_matches": 2,
+            "wins": 2,
+            "win_rate": 0.6666666666666666,
+            "kills": 20,
+            "deaths": 7,
+            "assists": 27
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 3,
+            "distinct_matches": 2,
+            "wins": 2,
+            "win_rate": 0.6666666666666666,
+            "kills": 24,
+            "deaths": 13,
+            "assists": 25
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 8,
+            "deaths": 0,
+            "assists": 16
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 22,
+            "deaths": 5,
+            "assists": 23
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 19,
+            "deaths": 11,
+            "assists": 22
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 5,
+            "deaths": 2,
+            "assists": 11
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 3,
+            "deaths": 9,
+            "assists": 11
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 7,
+            "deaths": 5,
+            "assists": 0
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-07": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 3,
+            "distinct_matches": 3,
+            "wins": 1,
+            "win_rate": 0.3333333333333333,
+            "kills": 23,
+            "deaths": 19,
+            "assists": 37
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 4,
+            "distinct_matches": 3,
+            "wins": 2,
+            "win_rate": 0.5,
+            "kills": 20,
+            "deaths": 14,
+            "assists": 47
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 5,
+            "distinct_matches": 3,
+            "wins": 3,
+            "win_rate": 0.6,
+            "kills": 39,
+            "deaths": 30,
+            "assists": 46
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 8,
+            "deaths": 0,
+            "assists": 16
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 12,
+            "deaths": 10,
+            "assists": 2
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 22,
+            "deaths": 5,
+            "assists": 23
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 3,
+            "deaths": 7,
+            "assists": 6
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 5,
+            "deaths": 2,
+            "assists": 11
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 3,
+            "deaths": 9,
+            "assists": 11
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 7,
+            "deaths": 12,
+            "assists": 20
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-08": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-08",
+            "dau": 9
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 3,
+            "retention_rate": 1.0
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 6,
+            "distinct_matches": 4,
+            "wins": 3,
+            "win_rate": 0.5,
+            "kills": 43,
+            "deaths": 35,
+            "assists": 65
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 4,
+            "distinct_matches": 3,
+            "wins": 2,
+            "win_rate": 0.5,
+            "kills": 20,
+            "deaths": 14,
+            "assists": 47
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 6,
+            "distinct_matches": 4,
+            "wins": 3,
+            "win_rate": 0.5,
+            "kills": 50,
+            "deaths": 31,
+            "assists": 51
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 8,
+            "deaths": 0,
+            "assists": 16
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 16,
+            "assists": 16
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 5,
+            "assists": 27
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u06",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 1,
+            "assists": 5
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 3,
+            "deaths": 7,
+            "assists": 6
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 5,
+            "deaths": 2,
+            "assists": 11
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 3,
+            "deaths": 9,
+            "assists": 11
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 13,
+            "deaths": 22,
+            "assists": 30
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 3,
+          "retention_rate": 1.0
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-09": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-08",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-09",
+            "dau": 9
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 3,
+            "retention_rate": 1.0
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 9,
+            "distinct_matches": 5,
+            "wins": 5,
+            "win_rate": 0.5555555555555556,
+            "kills": 54,
+            "deaths": 53,
+            "assists": 80
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 5,
+            "distinct_matches": 4,
+            "wins": 2,
+            "win_rate": 0.4,
+            "kills": 31,
+            "deaths": 16,
+            "assists": 60
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 6,
+            "distinct_matches": 4,
+            "wins": 3,
+            "win_rate": 0.5,
+            "kills": 50,
+            "deaths": 31,
+            "assists": 51
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 8,
+            "deaths": 0,
+            "assists": 16
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 16,
+            "assists": 16
+          },
+          {
+            "user_id": "u02",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 2,
+            "assists": 13
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 5,
+            "assists": 27
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u06",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 1,
+            "assists": 5
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 2,
+            "wins": 2,
+            "kills": 3,
+            "deaths": 17,
+            "assists": 9
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 5,
+            "deaths": 2,
+            "assists": 11
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 11,
+            "deaths": 17,
+            "assists": 15
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 4,
+            "wins": 2,
+            "kills": 16,
+            "deaths": 22,
+            "assists": 38
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 3,
+          "retention_rate": 1.0
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-10": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-08",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-09",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-10",
+            "dau": 7
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 3,
+            "retention_rate": 1.0
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 10,
+            "distinct_matches": 6,
+            "wins": 6,
+            "win_rate": 0.6,
+            "kills": 65,
+            "deaths": 58,
+            "assists": 94
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 7,
+            "distinct_matches": 5,
+            "wins": 2,
+            "win_rate": 0.2857142857142857,
+            "kills": 42,
+            "deaths": 32,
+            "assists": 77
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 7,
+            "distinct_matches": 5,
+            "wins": 4,
+            "win_rate": 0.5714285714285714,
+            "kills": 58,
+            "deaths": 37,
+            "assists": 55
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 8,
+            "deaths": 0,
+            "assists": 16
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 16,
+            "assists": 16
+          },
+          {
+            "user_id": "u02",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 2,
+            "assists": 13
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 4,
+            "wins": 2,
+            "kills": 32,
+            "deaths": 11,
+            "assists": 31
+          },
+          {
+            "user_id": "u04",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 11,
+            "deaths": 5,
+            "assists": 14
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u06",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 1,
+            "assists": 5
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 2,
+            "wins": 2,
+            "kills": 3,
+            "deaths": 17,
+            "assists": 9
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 2,
+            "wins": 0,
+            "kills": 14,
+            "deaths": 10,
+            "assists": 24
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 11,
+            "deaths": 17,
+            "assists": 15
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 4,
+            "wins": 2,
+            "kills": 16,
+            "deaths": 22,
+            "assists": 38
+          },
+          {
+            "user_id": "u11",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 2,
+            "deaths": 8,
+            "assists": 4
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 3,
+          "retention_rate": 1.0
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": false,
+          "retained_users": null,
+          "retention_rate": null
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-11": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-08",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-09",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-10",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-11",
+            "dau": 10
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 3,
+            "retention_rate": 1.0
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 11,
+            "distinct_matches": 7,
+            "wins": 7,
+            "win_rate": 0.6363636363636364,
+            "kills": 72,
+            "deaths": 67,
+            "assists": 97
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 10,
+            "distinct_matches": 6,
+            "wins": 3,
+            "win_rate": 0.3,
+            "kills": 50,
+            "deaths": 46,
+            "assists": 101
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 7,
+            "distinct_matches": 5,
+            "wins": 4,
+            "win_rate": 0.5714285714285714,
+            "kills": 58,
+            "deaths": 37,
+            "assists": 55
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 8,
+            "deaths": 5,
+            "assists": 32
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 16,
+            "assists": 16
+          },
+          {
+            "user_id": "u02",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 2,
+            "assists": 13
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 4,
+            "wins": 2,
+            "kills": 32,
+            "deaths": 11,
+            "assists": 31
+          },
+          {
+            "user_id": "u04",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 11,
+            "deaths": 5,
+            "assists": 14
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u06",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 1,
+            "assists": 5
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 11,
+            "deaths": 24,
+            "assists": 12
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 14,
+            "deaths": 12,
+            "assists": 29
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 11,
+            "deaths": 17,
+            "assists": 15
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 4,
+            "wins": 2,
+            "kills": 16,
+            "deaths": 22,
+            "assists": 38
+          },
+          {
+            "user_id": "u11",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 9,
+            "deaths": 17,
+            "assists": 7
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 3,
+          "retention_rate": 1.0
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-12": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-08",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-09",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-10",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-11",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-12",
+            "dau": 8
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 3,
+            "retention_rate": 1.0
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 12,
+            "distinct_matches": 8,
+            "wins": 8,
+            "win_rate": 0.6666666666666666,
+            "kills": 84,
+            "deaths": 68,
+            "assists": 113
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 11,
+            "distinct_matches": 7,
+            "wins": 3,
+            "win_rate": 0.2727272727272727,
+            "kills": 58,
+            "deaths": 49,
+            "assists": 109
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 9,
+            "distinct_matches": 6,
+            "wins": 5,
+            "win_rate": 0.5555555555555556,
+            "kills": 71,
+            "deaths": 46,
+            "assists": 73
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 16,
+            "deaths": 5,
+            "assists": 34
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 16,
+            "assists": 16
+          },
+          {
+            "user_id": "u02",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 2,
+            "assists": 13
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 5,
+            "wins": 2,
+            "kills": 37,
+            "deaths": 20,
+            "assists": 47
+          },
+          {
+            "user_id": "u04",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 11,
+            "deaths": 5,
+            "assists": 14
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u06",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 1,
+            "assists": 5
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 11,
+            "deaths": 24,
+            "assists": 12
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 4,
+            "wins": 2,
+            "kills": 26,
+            "deaths": 13,
+            "assists": 45
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 19,
+            "deaths": 20,
+            "assists": 23
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 4,
+            "wins": 2,
+            "kills": 16,
+            "deaths": 22,
+            "assists": 38
+          },
+          {
+            "user_id": "u11",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 9,
+            "deaths": 17,
+            "assists": 7
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 3,
+          "retention_rate": 1.0
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-13": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u10"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-08",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-09",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-10",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-11",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-12",
+            "dau": 8
+          },
+          {
+            "activity_date": "2026-01-13",
+            "dau": 8
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 3,
+            "retention_rate": 1.0
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 13,
+            "distinct_matches": 9,
+            "wins": 9,
+            "win_rate": 0.6923076923076923,
+            "kills": 95,
+            "deaths": 76,
+            "assists": 121
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 12,
+            "distinct_matches": 8,
+            "wins": 4,
+            "win_rate": 0.3333333333333333,
+            "kills": 61,
+            "deaths": 56,
+            "assists": 113
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 11,
+            "distinct_matches": 7,
+            "wins": 5,
+            "win_rate": 0.45454545454545453,
+            "kills": 73,
+            "deaths": 62,
+            "assists": 94
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 16,
+            "deaths": 5,
+            "assists": 34
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 24,
+            "deaths": 16,
+            "assists": 16
+          },
+          {
+            "user_id": "u02",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 2,
+            "assists": 13
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 5,
+            "wins": 2,
+            "kills": 37,
+            "deaths": 20,
+            "assists": 47
+          },
+          {
+            "user_id": "u04",
+            "player_matches": 1,
+            "wins": 1,
+            "kills": 11,
+            "deaths": 5,
+            "assists": 14
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u06",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 1,
+            "assists": 5
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 4,
+            "wins": 3,
+            "kills": 22,
+            "deaths": 32,
+            "assists": 20
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 5,
+            "wins": 3,
+            "kills": 29,
+            "deaths": 20,
+            "assists": 49
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 19,
+            "deaths": 20,
+            "assists": 23
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 5,
+            "wins": 2,
+            "kills": 17,
+            "deaths": 28,
+            "assists": 52
+          },
+          {
+            "user_id": "u11",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 10,
+            "deaths": 27,
+            "assists": 14
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 3,
+          "retention_rate": 1.0
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        }
+      ],
+      "users": 12
+    },
+    "2026-01-14": {
+      "metrics": {
+        "user_day": [
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-01",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-02",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-03",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-04",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-05",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-06",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-07",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-08",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-09",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-10",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u06"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-11",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u08"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-12",
+            "user_id": "u11"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u00"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u01"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u03"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u09"
+          },
+          {
+            "activity_date": "2026-01-13",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-14",
+            "user_id": "u02"
+          },
+          {
+            "activity_date": "2026-01-14",
+            "user_id": "u04"
+          },
+          {
+            "activity_date": "2026-01-14",
+            "user_id": "u05"
+          },
+          {
+            "activity_date": "2026-01-14",
+            "user_id": "u07"
+          },
+          {
+            "activity_date": "2026-01-14",
+            "user_id": "u10"
+          },
+          {
+            "activity_date": "2026-01-14",
+            "user_id": "u11"
+          }
+        ],
+        "dau": [
+          {
+            "activity_date": "2026-01-01",
+            "dau": 2
+          },
+          {
+            "activity_date": "2026-01-02",
+            "dau": 4
+          },
+          {
+            "activity_date": "2026-01-03",
+            "dau": 5
+          },
+          {
+            "activity_date": "2026-01-04",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-05",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-06",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-07",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-08",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-09",
+            "dau": 9
+          },
+          {
+            "activity_date": "2026-01-10",
+            "dau": 7
+          },
+          {
+            "activity_date": "2026-01-11",
+            "dau": 10
+          },
+          {
+            "activity_date": "2026-01-12",
+            "dau": 8
+          },
+          {
+            "activity_date": "2026-01-13",
+            "dau": 8
+          },
+          {
+            "activity_date": "2026-01-14",
+            "dau": 6
+          }
+        ],
+        "retention": [
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-01",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 3,
+            "retention_rate": 1.0
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-02",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-03",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 1,
+            "retention_rate": 0.3333333333333333
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 1,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          },
+          {
+            "cohort_date": "2026-01-04",
+            "day_offset": 7,
+            "cohort_users": 3,
+            "retained_users": 2,
+            "retention_rate": 0.6666666666666666
+          }
+        ],
+        "hero_stats": [
+          {
+            "hero": "Ember",
+            "player_matches": 16,
+            "distinct_matches": 10,
+            "wins": 11,
+            "win_rate": 0.6875,
+            "kills": 121,
+            "deaths": 89,
+            "assists": 158
+          },
+          {
+            "hero": "Stone",
+            "player_matches": 12,
+            "distinct_matches": 8,
+            "wins": 4,
+            "win_rate": 0.3333333333333333,
+            "kills": 61,
+            "deaths": 56,
+            "assists": 113
+          },
+          {
+            "hero": "Tide",
+            "player_matches": 12,
+            "distinct_matches": 8,
+            "wins": 5,
+            "win_rate": 0.4166666666666667,
+            "kills": 75,
+            "deaths": 72,
+            "assists": 101
+          }
+        ],
+        "player_stats": [
+          {
+            "user_id": "u00",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 16,
+            "deaths": 5,
+            "assists": 34
+          },
+          {
+            "user_id": "u01",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 28,
+            "deaths": 18,
+            "assists": 30
+          },
+          {
+            "user_id": "u02",
+            "player_matches": 1,
+            "wins": 0,
+            "kills": 11,
+            "deaths": 2,
+            "assists": 13
+          },
+          {
+            "user_id": "u03",
+            "player_matches": 6,
+            "wins": 2,
+            "kills": 48,
+            "deaths": 21,
+            "assists": 59
+          },
+          {
+            "user_id": "u04",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 13,
+            "deaths": 15,
+            "assists": 21
+          },
+          {
+            "user_id": "u05",
+            "player_matches": 3,
+            "wins": 2,
+            "kills": 22,
+            "deaths": 18,
+            "assists": 41
+          },
+          {
+            "user_id": "u06",
+            "player_matches": 2,
+            "wins": 1,
+            "kills": 22,
+            "deaths": 11,
+            "assists": 16
+          },
+          {
+            "user_id": "u07",
+            "player_matches": 4,
+            "wins": 3,
+            "kills": 22,
+            "deaths": 32,
+            "assists": 20
+          },
+          {
+            "user_id": "u08",
+            "player_matches": 5,
+            "wins": 3,
+            "kills": 29,
+            "deaths": 20,
+            "assists": 49
+          },
+          {
+            "user_id": "u09",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 19,
+            "deaths": 20,
+            "assists": 23
+          },
+          {
+            "user_id": "u10",
+            "player_matches": 5,
+            "wins": 2,
+            "kills": 17,
+            "deaths": 28,
+            "assists": 52
+          },
+          {
+            "user_id": "u11",
+            "player_matches": 3,
+            "wins": 1,
+            "kills": 10,
+            "deaths": 27,
+            "assists": 14
+          }
+        ],
+        "monetization": [
+          {
+            "payment_date": "2026-01-02",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          },
+          {
+            "payment_date": "2026-01-03",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-04",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 499,
+            "arppu_cents": 499.0
+          },
+          {
+            "payment_date": "2026-01-05",
+            "transactions": 1,
+            "paying_users": 1,
+            "revenue_cents": 199,
+            "arppu_cents": 199.0
+          }
+        ]
+      },
+      "retention_cells": [
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-01",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 3,
+          "retention_rate": 1.0
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-02",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-03",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 1,
+          "retention_rate": 0.3333333333333333
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 1,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        },
+        {
+          "cohort_date": "2026-01-04",
+          "day_offset": 7,
+          "cohort_users": 3,
+          "observable": true,
+          "retained_users": 2,
+          "retention_rate": 0.6666666666666666
+        }
+      ],
+      "users": 12
+    }
+  }
+}

@@ -1,5 +1,11 @@
 # MOBA Analytics Lab
 
+[**Live demo →**](https://teddy8023mars.github.io/moba-analytics-lab/) · [Recorded data](docs/showcase-data.json) · [Visual preview](docs/assets/showcase.svg)
+
+[![MOBA Analytics Lab dashboard preview](docs/assets/showcase.svg)](https://teddy8023mars.github.io/moba-analytics-lab/)
+
+**What to click:** change the observation day to **2026-01-08** to see why newer D7 cohorts are **N/A**, then switch the hero measure between win rate, player matches, kills and assists. The dashboard is an offline-capable explorer of actual recorded synthetic pipeline results.
+
 A runnable Python + DuckDB + SQL lab for reasoning about event identity, fact grains and cohort observation windows.
 
 **All data is fully synthetic. This is an AI-assisted personal educational project, not an employer implementation, production system or measured business impact.** Hero names and player IDs are fictional.
@@ -19,6 +25,15 @@ python3 -m venv .venv
 Open `examples/report/index.html` in a browser. Six CSV tables and `run.json` accompany the HTML. The checked-in example was produced with these commands. Run metadata declares the UTC observation day; `--as-of` means the input is complete through that day's end, rather than merely the latest event date. The caller must guarantee that completeness. Future events are filtered out of analytical facts.
 
 The seed-7 example has 12 users, 102 raw logins, 10 matches, 40 player/match rows and 5 raw payments. Exact repeats reduce these to 101 user/day rows and 4 payment transactions. These are tiny demonstration fixtures, not a throughput benchmark.
+
+## Rebuild the visual showcase
+
+```sh
+PYTHONPATH=src .venv/bin/python scripts/build_showcase.py
+PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
+```
+
+Open `docs/index.html` directly, or serve `docs/` with a local static server. The standalone page embeds the exported data, uses no CDN or API, and works from a local file. `docs/showcase-data.json` records 14 actual pipeline runs against the same checked-in fixture. `docs/assets/showcase.svg` is a reproducible static preview. [Visual design and QA notes](docs/visual-design.md) explain chart semantics and acceptance checks.
 
 ## What the pipeline teaches
 
@@ -40,3 +55,7 @@ See [architecture](docs/architecture.md), [metric dictionary and input contract]
 This release is a local full rebuild. It provides no real telemetry connector, incremental warehouse load, orchestration, dbt layer, query-performance evidence or production deployment. The validation checks event integrity, not full MOBA game rules: fixtures use four participants per match and do not model ranked rules or enforce balanced kill/death totals. Reports contain fictional metrics and establish no real business conclusions.
 
 MIT licensed. Remote CI is configured for Python 3.11/3.12; its result must be checked after publication.
+
+## Role alignment
+
+See [the current JD comparison](docs/jd-alignment.md) for which data engineering skills this lab demonstrates and which cloud, orchestration or distributed capabilities remain outside its scope.
