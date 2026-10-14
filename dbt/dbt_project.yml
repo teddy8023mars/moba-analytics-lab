@@ -1,0 +1,11 @@
+name: moba_analytics
+version: '1.0.0'
+config-version: 2
+profile: moba_analytics
+model-paths: [models]
+test-paths: [tests]
+models:
+  moba_analytics:
+    +materialized: table
+flags:
+  send_anonymous_usage_stats: false

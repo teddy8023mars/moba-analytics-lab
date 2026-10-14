@@ -52,10 +52,22 @@ See [architecture](docs/architecture.md), [metric dictionary and input contract]
 
 ## Scope
 
-This release is a local full rebuild. It provides no real telemetry connector, incremental warehouse load, orchestration, dbt layer, query-performance evidence or production deployment. The validation checks event integrity, not full MOBA game rules: fixtures use four participants per match and do not model ranked rules or enforce balanced kill/death totals. Reports contain fictional metrics and establish no real business conclusions.
+This release is a local full rebuild. It provides no real telemetry connector, incremental warehouse load, scheduling orchestration, query-performance evidence or production deployment. The validation checks event integrity, not full MOBA game rules: fixtures use four participants per match and do not model ranked rules or enforce balanced kill/death totals. Reports contain fictional metrics and establish no real business conclusions.
 
 MIT licensed. Remote CI is configured for Python 3.11/3.12; its result must be checked after publication.
 
 ## Role alignment
 
 See [the current JD comparison](docs/jd-alignment.md) for which data engineering skills this lab demonstrates and which cloud, orchestration or distributed capabilities remain outside its scope.
+
+## Optional executed dbt models
+
+[Run and inspect the dbt walkthrough](docs/dbt.md). Thirteen dependency-linked SQL models rebuild all six marts from validated synthetic raw tables. Three singular data tests check fact keys, composite grains and retention/maturity invariants. The demo compares every mart against the original pipeline at two cutoffs, intentionally corrupts one retained count, observes dbt test exit 1, then rebuilds to restore exit 0. The original interactive Pages snapshot and metric definitions remain unchanged.
+
+```bash
+python3 -m venv .venv-dbt
+.venv-dbt/bin/python -m pip install --index-url https://pypi.org/simple -r requirements-dbt.txt .
+PYTHONPATH=src .venv-dbt/bin/python scripts/run_dbt_demo.py --output .dbt-output/demo-1
+```
+
+Use a fresh output folder: existing warehouse files are refused. Optional dependencies do not affect the core package. This is executed local dbt transformation and validation, without a scheduler, cloud warehouse or incremental dbt materialization.

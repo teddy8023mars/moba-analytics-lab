@@ -52,3 +52,7 @@ Wheel build/install and installed CLI exited 0; **12 tests passed** in the non-e
 ## Limits of this evidence
 
 Only local Python 3.12/macOS was executed here. GitHub Actions targets Ubuntu Python 3.11/3.12 but remote runs await publication. No benchmark, production reliability, real MOBA game validity or business effect is established. All data/metrics are synthetic. Full rebuild uses memory; input completeness is asserted by the caller; output-directory writes are not atomic. No dbt, cloud warehouse, incremental ingestion, observability service or live source connector is included.
+
+## Optional dbt execution — 2026-10-15
+
+Earlier sections describe the original pre-publication release. The optional dbt extension now runs locally on Python3.12.14 with dbt-core1.10.11, dbt-duckdb1.10.1 and DuckDB1.4.3. Full18-test suite (including one real multi-phase dbt integration test) passed: [test output](dbt-test-output.txt). [Observed summary](dbt-output.json) records13 built models,3 passing singular data tests, all six marts equal to canonical outputs at Jan14 and Jan08, one deliberate retention violation / test exit1, and restored build exit0. The actual CLI demo was run separately to retain evidence. Rebuilt14 showcase snapshots and confirmed docs/index.html, showcase-data.json and SVG unchanged. Remote results for this commit must be checked after publishing.

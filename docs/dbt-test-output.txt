@@ -1,0 +1,23 @@
+test_build_parity_boundaries_and_fault_detection (test_dbt_integration.DbtIntegrationTests.test_build_parity_boundaries_and_fault_detection) ... ok
+test_asof_requires_explicit_calendar_format (test_pipeline.PipelineTests.test_asof_requires_explicit_calendar_format) ... ok
+test_cli_exports_and_invalid_input_exit (test_pipeline.PipelineTests.test_cli_exports_and_invalid_input_exit) ... ok
+test_conflicting_identity_fails (test_pipeline.PipelineTests.test_conflicting_identity_fails) ... ok
+test_dau_dedup_utc_and_future_cutoff (test_pipeline.PipelineTests.test_dau_dedup_utc_and_future_cutoff) ... ok
+test_duplicate_payment_and_participant_do_not_inflate (test_pipeline.PipelineTests.test_duplicate_payment_and_participant_do_not_inflate) ... ok
+test_empty_data_has_empty_metrics (test_pipeline.PipelineTests.test_empty_data_has_empty_metrics) ... ok
+test_generator_and_pipeline_are_repeatable (test_pipeline.PipelineTests.test_generator_and_pipeline_are_repeatable) ... ok
+test_hero_and_player_grains_do_not_multiply_payments (test_pipeline.PipelineTests.test_hero_and_player_grains_do_not_multiply_payments) ... ok
+test_invalid_inputs_fail_explicitly (test_pipeline.PipelineTests.test_invalid_inputs_fail_explicitly) ... ok
+test_missing_match_and_pre_signup_fail (test_pipeline.PipelineTests.test_missing_match_and_pre_signup_fail) ... ok
+test_partial_observation_excludes_d7_but_keeps_d1 (test_pipeline.PipelineTests.test_partial_observation_excludes_d7_but_keeps_d1) ... ok
+test_retention_observable_denominators (test_pipeline.PipelineTests.test_retention_observable_denominators) ... ok
+test_na_cells_are_censored_and_never_zero (test_showcase.ShowcaseTests.test_na_cells_are_censored_and_never_zero) ... ok
+test_observed_zero_is_distinct_from_unobservable (test_showcase.ShowcaseTests.test_observed_zero_is_distinct_from_unobservable) ... ok
+test_preview_key_values_match_full_snapshot (test_showcase.ShowcaseTests.test_preview_key_values_match_full_snapshot) ... ok
+test_recorded_snapshots_equal_canonical_pipeline (test_showcase.ShowcaseTests.test_recorded_snapshots_equal_canonical_pipeline) ... ok
+test_reproducible_export_and_embedded_offline_data (test_showcase.ShowcaseTests.test_reproducible_export_and_embedded_offline_data) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 7.188s
+
+OK

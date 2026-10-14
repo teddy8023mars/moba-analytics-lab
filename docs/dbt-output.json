@@ -1,0 +1,36 @@
+{
+  "as_of": "2026-01-14",
+  "row_counts": {
+    "user_day": 101,
+    "dau": 14,
+    "retention": 8,
+    "hero_stats": 3,
+    "player_stats": 12,
+    "monetization": 4
+  },
+  "jan1_retention": [
+    [
+      1,
+      3,
+      2
+    ],
+    [
+      7,
+      3,
+      3
+    ]
+  ],
+  "revenue_cents": 1396,
+  "earlier_cutoff_retention_rows": 5,
+  "all_marts_match_canonical": true,
+  "bad_retention_test_exit": 1,
+  "bad_retention_failures": 1,
+  "restored_test_exit": 0,
+  "models_built": 13,
+  "data_tests_passed": 3,
+  "versions": {
+    "dbt-core": "1.10.11",
+    "dbt-duckdb": "1.10.1",
+    "duckdb": "1.4.3"
+  }
+}

@@ -1,0 +1,37 @@
+version: 2
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_users
+      - name: raw_logins
+      - name: raw_matches
+      - name: raw_participants
+      - name: raw_payments
+models:
+  - name: stg_users
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: stg_logins
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: stg_matches
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: stg_participants
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: stg_payments
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: user_day
+    description: "One user per complete UTC activity day."
+  - name: dau
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: fact_player_match
+    description: "One player per match, independent of payments."
+  - name: hero_stats
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: player_stats
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: monetization
+    description: "One UTC payment date; integer revenue cents."
+  - name: observation
+    description: "Typed local table; grain and definitions are documented in the metric dictionary."
+  - name: retention
+    description: "One observable signup cohort and exact day offset; incomplete windows excluded."

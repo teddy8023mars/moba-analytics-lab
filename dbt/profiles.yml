@@ -1,0 +1,10 @@
+moba_analytics:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('MOBA_DBT_DATABASE') }}"
+      schema: analytics
+      threads: 1
+      settings:
+        TimeZone: UTC

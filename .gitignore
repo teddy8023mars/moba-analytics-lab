@@ -6,3 +6,11 @@ dist/
 .DS_Store
 .venv-*/
 .artifacts/
+
+# Optional dbt runtime artifacts
+.dbt-output/
+dbt/target/
+dbt/logs/
+*.duckdb
+*.duckdb.wal
+.venv-dbt/
