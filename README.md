@@ -79,3 +79,7 @@ Use a fresh output folder: existing warehouse files are refused. Optional depend
 ## Locate the measured bottleneck
 
 [Stage profiling](docs/stage-profile.md) records three fresh-process samples each at 1,000 and 5,000 synthetic users. Raw-table preparation/loading takes about 99% of measured wall time in this regular workload; SQL models are a separate measured stage. Optional `--profile-stages` keeps metric results and default output unchanged. This locates a region to investigate before claiming an optimization.
+
+## A measured loading change
+
+[Read the interleaved loader experiment](docs/batched-load.md). On a regular 107,500-record synthetic workload, the full-pipeline median fell from 21.626 to 15.379 seconds across three fresh-process pairs (about 29% less elapsed time). All six complete metric outputs match the retained reference loader. Bounded 500-row parameter batches are now the default; reference executemany remains selectable. This is a local measured comparison, not a production throughput claim.

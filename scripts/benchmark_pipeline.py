@@ -1,5 +1,6 @@
 """Bounded POSIX benchmark of the unchanged canonical full-rebuild pipeline."""
 import argparse
+import hashlib
 from datetime import datetime, timedelta, timezone
 import json
 import os
@@ -57,24 +58,26 @@ def check_metrics(metrics,users):
     return observed
 
 
-def sample(users, profile_stages=False):
+def sample(users, profile_stages=False, load_strategy="batched", insert_batch_size=500):
     data=workload(users)
     timings={} if profile_stages else None
     start=time.perf_counter()
-    metrics=run_pipeline(data,'2026-01-14',timings=timings)
+    metrics=run_pipeline(data,'2026-01-14',timings=timings,load_strategy=load_strategy,insert_batch_size=insert_batch_size)
     seconds=time.perf_counter()-start
     correctness=check_metrics(metrics,users)
+    digest=hashlib.sha256(json.dumps(metrics,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     rss=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
     if sys.platform!='darwin':
         rss*=1024
     report={'pid':os.getpid(),'seconds':seconds,'peak_process_rss_bytes':rss,
-            'input_rows':sum(len(v) for v in data.values()),'correctness':correctness}
+            'input_rows':sum(len(v) for v in data.values()),'correctness':correctness,
+            'load_strategy':load_strategy,'insert_batch_size':insert_batch_size,'metric_digest':digest}
     if timings is not None:
         report['stage_seconds']=timings
     return report
 
 
-def benchmark(sizes,repeats,profile_stages=False):
+def benchmark(sizes,repeats,profile_stages=False,load_strategy="batched",insert_batch_size=500):
     if type(repeats) is not int or not 1<=repeats<=10:
         raise ValueError('repeats must be between 1 and 10')
     if sys.platform not in ('darwin','linux'):
@@ -85,12 +88,12 @@ def benchmark(sizes,repeats,profile_stages=False):
             'environment':{'os':platform.system(),'os_release':platform.release(),'architecture':platform.machine(),
                            'python':platform.python_version(),'duckdb':duckdb.__version__,
                            'logical_cpus':os.cpu_count(),'duckdb_default_threads':threads},
-            'rss_scope':'whole child-process peak, including imports, fixture generation, pipeline and correctness checks',
+            'rss_scope':'whole child-process peak, including imports, fixture generation, pipeline, correctness checks and full-result digest',
             'workloads':[]}
     for users in sizes:
         samples=[]
         for _ in range(repeats):
-            result=subprocess.run([sys.executable,str(Path(__file__).resolve()),'--worker','--users',str(users)] + (['--profile-stages'] if profile_stages else []),
+            result=subprocess.run([sys.executable,str(Path(__file__).resolve()),'--worker','--users',str(users),'--load-strategy',load_strategy,'--insert-batch-size',str(insert_batch_size)] + (['--profile-stages'] if profile_stages else []),
                                   capture_output=True,text=True,timeout=180)
             if result.returncode:
                 raise RuntimeError(result.stderr or result.stdout)
@@ -109,6 +112,8 @@ if __name__=='__main__':
     parser.add_argument('--users',type=int,nargs='+',default=[100,1000,5000])
     parser.add_argument('--repeats',type=int,default=3)
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--load-strategy',choices=['executemany','batched'],default='batched')
+    parser.add_argument('--insert-batch-size',type=int,default=500)
     parser.add_argument('--profile-stages',action='store_true',help='record six full-pipeline stages per sample')
     parser.add_argument('--worker',action='store_true',help=argparse.SUPPRESS)
     args=parser.parse_args()
@@ -116,9 +121,9 @@ if __name__=='__main__':
         if args.worker:
             if len(args.users)!=1:
                 raise ValueError('worker takes exactly one scale')
-            report=sample(args.users[0],args.profile_stages)
+            report=sample(args.users[0],args.profile_stages,args.load_strategy,args.insert_batch_size)
         else:
-            report=benchmark(args.users,args.repeats,args.profile_stages)
+            report=benchmark(args.users,args.repeats,args.profile_stages,args.load_strategy,args.insert_batch_size)
         text=json.dumps(report,indent=2)+'\n'
         if args.output:
             args.output.write_text(text)

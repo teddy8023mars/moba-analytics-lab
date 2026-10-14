@@ -33,7 +33,7 @@ The next justified experiment is batching parameterized raw inserts while preser
 Install the normal project (dbt optional, unnecessary for this benchmark):
 
 ```bash
-PYTHONPATH=src .venv/bin/python scripts/benchmark_pipeline.py --users 1000 5000 --repeats 3 --profile-stages --output profile-local.json
+PYTHONPATH=src .venv/bin/python scripts/benchmark_pipeline.py --users 1000 5000 --repeats 3 --profile-stages --load-strategy executemany --output profile-local.json
 ```
 
 The benchmark's existing bounded scale/repeat/worker-timeout rules apply. Python callers can request `run_pipeline(data, as_of, timings={})`, retaining their dict to inspect six stage seconds and `total`. Use a variable, for example:
@@ -48,3 +48,5 @@ print(stages)
 Default calls preserve the original result shape and do not sample the performance clock. The dictionary is replaced only after a successful complete rebuild, including connection close. Failed validation or later SQL errors leave its previous contents unchanged; callers must handle the exception and avoid presenting a prior report as the failed run. No failed-run profiling or per-stage memory capture is implemented. `timings` must be a dict or None. Timing publication and optional argument checking are outside inner total.
 
 Verification: three new expected-behavior tests first failed due to missing timings keyword/CLI flag. Full 24-test suite with optional dbt passes in [stage-profile-test-output.txt](stage-profile-test-output.txt). Tests compare all profiled metrics against the unprofiled path, assert literal known retention/revenue, check input preservation and timing partition, exercise both early validation and injected late SQL failures, and run a fresh-process four-user CLI sample with independent totals. No performance thresholds are used in tests.
+
+Historical results above used the executemany loader. The current default is bounded batched loading; select executemany explicitly to reproduce the reference algorithm. See [the interleaved comparison](batched-load.md) for the later measured change.

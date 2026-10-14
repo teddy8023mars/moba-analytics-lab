@@ -31,7 +31,7 @@ Install the normal project; dbt is not needed for benchmarking. macOS/Linux:
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install --index-url https://pypi.org/simple .
-PYTHONPATH=src .venv/bin/python scripts/benchmark_pipeline.py --users 100 1000 5000 --repeats 3 --output benchmark-local.json
+PYTHONPATH=src .venv/bin/python scripts/benchmark_pipeline.py --users 100 1000 5000 --repeats 3 --load-strategy executemany --output benchmark-local.json
 PYTHONPATH=src .venv/bin/python scripts/explain_user_day.py --output query-plan-local.txt
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 ```
@@ -43,3 +43,5 @@ Output parent must exist; named output files are overwritten. Sizes must be posi
 [Recorded EXPLAIN ANALYZE](benchmark-query-plan.txt) comes from a separate four-user,60-login-record fixture. It applies the same date/user DISTINCT grain as canonical user_day, directly to raw_logins. The plan shows a table scan of 60 rows and HASH_GROUP_BY producing 56 rows, demonstrating duplicate collapse. This explanatory query omits canonical staging/cutoff and is not the whole-pipeline benchmark. Its tiny timing cannot explain the 20-second larger workload, prove a bottleneck or predict scaling. The next useful performance step is stage timing of validation/loading/SQL/result fetch before choosing an optimization.
 
 References: [DuckDB EXPLAIN ANALYZE semantics](https://duckdb.org/docs/current/guides/meta/explain_analyze), [Python resource usage API](https://docs.python.org/3/library/resource.html). Recorded plans come from pinned DuckDB 1.4.3; current documentation may describe a newer version.
+
+Historical results above used the executemany loader. The current default is bounded batched loading; select executemany explicitly to reproduce the reference algorithm. See [the interleaved comparison](batched-load.md) for the later measured change.

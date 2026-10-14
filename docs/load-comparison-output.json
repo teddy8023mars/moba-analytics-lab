@@ -1,0 +1,392 @@
+{
+  "measurement": "validated in-memory full rebuild; fixture generation and imports excluded",
+  "environment": {
+    "os": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "duckdb": "1.4.3",
+    "logical_cpus": 10,
+    "duckdb_default_threads": 10
+  },
+  "rss_scope": "whole child-process peak, including imports, fixture generation, pipeline, correctness checks and full-result serialization/hash",
+  "workloads": [
+    {
+      "users": 1000,
+      "input_rows": 21500,
+      "pairs": [
+        {
+          "order": [
+            "executemany",
+            "batched"
+          ],
+          "samples": {
+            "executemany": {
+              "pid": 2351,
+              "seconds": 4.144160208990797,
+              "peak_process_rss_bytes": 102432768,
+              "input_rows": 21500,
+              "correctness": {
+                "user_days": 14000,
+                "dau_per_day": 1000,
+                "retention_rows": 2,
+                "revenue_cents": 1198000,
+                "transactions": 2000
+              },
+              "load_strategy": "executemany",
+              "insert_batch_size": 500,
+              "metric_digest": "a77caaaeaa7418cfbbb195adc5cbbe42dbfe6cfbe1ddb075cbfa0b15c6a8bd8a",
+              "stage_seconds": {
+                "validation": 0.021290167002007365,
+                "connection_setup": 0.004595083009917289,
+                "raw_load": 4.091932334005833,
+                "sql_models": 0.012592457991559058,
+                "result_fetch": 0.01244254200719297,
+                "connection_close": 0.0006537499721162021,
+                "total": 4.143506333988626
+              }
+            },
+            "batched": {
+              "pid": 2353,
+              "seconds": 2.9577274170005694,
+              "peak_process_rss_bytes": 98811904,
+              "input_rows": 21500,
+              "correctness": {
+                "user_days": 14000,
+                "dau_per_day": 1000,
+                "retention_rows": 2,
+                "revenue_cents": 1198000,
+                "transactions": 2000
+              },
+              "load_strategy": "batched",
+              "insert_batch_size": 500,
+              "metric_digest": "a77caaaeaa7418cfbbb195adc5cbbe42dbfe6cfbe1ddb075cbfa0b15c6a8bd8a",
+              "stage_seconds": {
+                "validation": 0.021096541022416204,
+                "connection_setup": 0.004110249981749803,
+                "raw_load": 2.905857042002026,
+                "sql_models": 0.013404667028225958,
+                "result_fetch": 0.011929708009120077,
+                "connection_close": 0.0005637919530272484,
+                "total": 2.9569619999965653
+              }
+            }
+          },
+          "full_metric_parity": true
+        },
+        {
+          "order": [
+            "batched",
+            "executemany"
+          ],
+          "samples": {
+            "batched": {
+              "pid": 2354,
+              "seconds": 3.0090243750019,
+              "peak_process_rss_bytes": 99975168,
+              "input_rows": 21500,
+              "correctness": {
+                "user_days": 14000,
+                "dau_per_day": 1000,
+                "retention_rows": 2,
+                "revenue_cents": 1198000,
+                "transactions": 2000
+              },
+              "load_strategy": "batched",
+              "insert_batch_size": 500,
+              "metric_digest": "a77caaaeaa7418cfbbb195adc5cbbe42dbfe6cfbe1ddb075cbfa0b15c6a8bd8a",
+              "stage_seconds": {
+                "validation": 0.021020499989390373,
+                "connection_setup": 0.004238624998833984,
+                "raw_load": 2.957550833991263,
+                "sql_models": 0.01326116599375382,
+                "result_fetch": 0.011577000026591122,
+                "connection_close": 0.0005583749734796584,
+                "total": 3.008206499973312
+              }
+            },
+            "executemany": {
+              "pid": 2360,
+              "seconds": 4.147182749991771,
+              "peak_process_rss_bytes": 104218624,
+              "input_rows": 21500,
+              "correctness": {
+                "user_days": 14000,
+                "dau_per_day": 1000,
+                "retention_rows": 2,
+                "revenue_cents": 1198000,
+                "transactions": 2000
+              },
+              "load_strategy": "executemany",
+              "insert_batch_size": 500,
+              "metric_digest": "a77caaaeaa7418cfbbb195adc5cbbe42dbfe6cfbe1ddb075cbfa0b15c6a8bd8a",
+              "stage_seconds": {
+                "validation": 0.021588875039014965,
+                "connection_setup": 0.004303166992031038,
+                "raw_load": 4.094891124987043,
+                "sql_models": 0.012783666024915874,
+                "result_fetch": 0.012097541999537498,
+                "connection_close": 0.0007591669564135373,
+                "total": 4.146423541998956
+              }
+            }
+          },
+          "full_metric_parity": true
+        },
+        {
+          "order": [
+            "executemany",
+            "batched"
+          ],
+          "samples": {
+            "executemany": {
+              "pid": 2362,
+              "seconds": 4.137671417032834,
+              "peak_process_rss_bytes": 101679104,
+              "input_rows": 21500,
+              "correctness": {
+                "user_days": 14000,
+                "dau_per_day": 1000,
+                "retention_rows": 2,
+                "revenue_cents": 1198000,
+                "transactions": 2000
+              },
+              "load_strategy": "executemany",
+              "insert_batch_size": 500,
+              "metric_digest": "a77caaaeaa7418cfbbb195adc5cbbe42dbfe6cfbe1ddb075cbfa0b15c6a8bd8a",
+              "stage_seconds": {
+                "validation": 0.021364666987210512,
+                "connection_setup": 0.004159542033448815,
+                "raw_load": 4.0861930410028435,
+                "sql_models": 0.012769291992299259,
+                "result_fetch": 0.01188937498955056,
+                "connection_close": 0.0006428749766200781,
+                "total": 4.137018791981973
+              }
+            },
+            "batched": {
+              "pid": 2364,
+              "seconds": 3.0058348340098746,
+              "peak_process_rss_bytes": 98009088,
+              "input_rows": 21500,
+              "correctness": {
+                "user_days": 14000,
+                "dau_per_day": 1000,
+                "retention_rows": 2,
+                "revenue_cents": 1198000,
+                "transactions": 2000
+              },
+              "load_strategy": "batched",
+              "insert_batch_size": 500,
+              "metric_digest": "a77caaaeaa7418cfbbb195adc5cbbe42dbfe6cfbe1ddb075cbfa0b15c6a8bd8a",
+              "stage_seconds": {
+                "validation": 0.021319583000149578,
+                "connection_setup": 0.004264000046532601,
+                "raw_load": 2.953457333962433,
+                "sql_models": 0.013367208011914045,
+                "result_fetch": 0.012105999980121851,
+                "connection_close": 0.0005774580058641732,
+                "total": 3.0050915830070153
+              }
+            }
+          },
+          "full_metric_parity": true
+        }
+      ],
+      "seconds_median": {
+        "executemany": 4.144160208990797,
+        "batched": 3.0058348340098746
+      },
+      "median_ratio_reference_over_candidate": 1.3787052309399057
+    },
+    {
+      "users": 5000,
+      "input_rows": 107500,
+      "pairs": [
+        {
+          "order": [
+            "executemany",
+            "batched"
+          ],
+          "samples": {
+            "executemany": {
+              "pid": 2373,
+              "seconds": 21.62600254197605,
+              "peak_process_rss_bytes": 227098624,
+              "input_rows": 107500,
+              "correctness": {
+                "user_days": 70000,
+                "dau_per_day": 5000,
+                "retention_rows": 2,
+                "revenue_cents": 5990000,
+                "transactions": 10000
+              },
+              "load_strategy": "executemany",
+              "insert_batch_size": 500,
+              "metric_digest": "d9cb216bf0507f1de2cd94fc574053d807cbc720eebda344955adba570dab375",
+              "stage_seconds": {
+                "validation": 0.11132800002815202,
+                "connection_setup": 0.004580582957714796,
+                "raw_load": 21.408604083000682,
+                "sql_models": 0.03937962499912828,
+                "result_fetch": 0.057044917019084096,
+                "connection_close": 0.0011529999901540577,
+                "total": 21.622090207994916
+              }
+            },
+            "batched": {
+              "pid": 2475,
+              "seconds": 15.443177832989022,
+              "peak_process_rss_bytes": 188628992,
+              "input_rows": 107500,
+              "correctness": {
+                "user_days": 70000,
+                "dau_per_day": 5000,
+                "retention_rows": 2,
+                "revenue_cents": 5990000,
+                "transactions": 10000
+              },
+              "load_strategy": "batched",
+              "insert_batch_size": 500,
+              "metric_digest": "d9cb216bf0507f1de2cd94fc574053d807cbc720eebda344955adba570dab375",
+              "stage_seconds": {
+                "validation": 0.11255579197313637,
+                "connection_setup": 0.004422583035193384,
+                "raw_load": 15.223475707985926,
+                "sql_models": 0.0400180839933455,
+                "result_fetch": 0.05667895800434053,
+                "connection_close": 0.0006404580199159682,
+                "total": 15.437791583011858
+              }
+            }
+          },
+          "full_metric_parity": true
+        },
+        {
+          "order": [
+            "batched",
+            "executemany"
+          ],
+          "samples": {
+            "batched": {
+              "pid": 2542,
+              "seconds": 15.37857212498784,
+              "peak_process_rss_bytes": 189235200,
+              "input_rows": 107500,
+              "correctness": {
+                "user_days": 70000,
+                "dau_per_day": 5000,
+                "retention_rows": 2,
+                "revenue_cents": 5990000,
+                "transactions": 10000
+              },
+              "load_strategy": "batched",
+              "insert_batch_size": 500,
+              "metric_digest": "d9cb216bf0507f1de2cd94fc574053d807cbc720eebda344955adba570dab375",
+              "stage_seconds": {
+                "validation": 0.11140683403937146,
+                "connection_setup": 0.004798749985639006,
+                "raw_load": 15.160255916009191,
+                "sql_models": 0.03885283396812156,
+                "result_fetch": 0.057727708015590906,
+                "connection_close": 0.0007581249810755253,
+                "total": 15.37380016699899
+              }
+            },
+            "executemany": {
+              "pid": 2561,
+              "seconds": 21.39388670801418,
+              "peak_process_rss_bytes": 238616576,
+              "input_rows": 107500,
+              "correctness": {
+                "user_days": 70000,
+                "dau_per_day": 5000,
+                "retention_rows": 2,
+                "revenue_cents": 5990000,
+                "transactions": 10000
+              },
+              "load_strategy": "executemany",
+              "insert_batch_size": 500,
+              "metric_digest": "d9cb216bf0507f1de2cd94fc574053d807cbc720eebda344955adba570dab375",
+              "stage_seconds": {
+                "validation": 0.10986808297457173,
+                "connection_setup": 0.004733833018690348,
+                "raw_load": 21.152418875019066,
+                "sql_models": 0.06015220901463181,
+                "result_fetch": 0.06168658297974616,
+                "connection_close": 0.00087629200424999,
+                "total": 21.389735875010956
+              }
+            }
+          },
+          "full_metric_parity": true
+        },
+        {
+          "order": [
+            "executemany",
+            "batched"
+          ],
+          "samples": {
+            "executemany": {
+              "pid": 2609,
+              "seconds": 21.92103174998192,
+              "peak_process_rss_bytes": 238043136,
+              "input_rows": 107500,
+              "correctness": {
+                "user_days": 70000,
+                "dau_per_day": 5000,
+                "retention_rows": 2,
+                "revenue_cents": 5990000,
+                "transactions": 10000
+              },
+              "load_strategy": "executemany",
+              "insert_batch_size": 500,
+              "metric_digest": "d9cb216bf0507f1de2cd94fc574053d807cbc720eebda344955adba570dab375",
+              "stage_seconds": {
+                "validation": 0.11568329099100083,
+                "connection_setup": 0.0052769590402022,
+                "raw_load": 21.70004995795898,
+                "sql_models": 0.039508708054199815,
+                "result_fetch": 0.05607841699384153,
+                "connection_close": 0.0007624579593539238,
+                "total": 21.91735979099758
+              }
+            },
+            "batched": {
+              "pid": 2675,
+              "seconds": 15.123984209029004,
+              "peak_process_rss_bytes": 189120512,
+              "input_rows": 107500,
+              "correctness": {
+                "user_days": 70000,
+                "dau_per_day": 5000,
+                "retention_rows": 2,
+                "revenue_cents": 5990000,
+                "transactions": 10000
+              },
+              "load_strategy": "batched",
+              "insert_batch_size": 500,
+              "metric_digest": "d9cb216bf0507f1de2cd94fc574053d807cbc720eebda344955adba570dab375",
+              "stage_seconds": {
+                "validation": 0.11059075000230223,
+                "connection_setup": 0.004490208986680955,
+                "raw_load": 14.908676457998808,
+                "sql_models": 0.03853941702982411,
+                "result_fetch": 0.05678145796991885,
+                "connection_close": 0.0007200830150395632,
+                "total": 15.119798375002574
+              }
+            }
+          },
+          "full_metric_parity": true
+        }
+      ],
+      "seconds_median": {
+        "executemany": 21.62600254197605,
+        "batched": 15.37857212498784
+      },
+      "median_ratio_reference_over_candidate": 1.4062425540038976
+    }
+  ],
+  "method": "fresh process per variant; alternating reference/candidate order; full metric SHA256 parity"
+}

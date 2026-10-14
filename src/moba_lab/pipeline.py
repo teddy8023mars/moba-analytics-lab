@@ -79,7 +79,20 @@ def _validated(data):
     return clean
 
 
-def run_pipeline(data: dict, as_of: str, *, timings: dict | None = None) -> dict[str, list[dict]]:
+def _insert_rows(con, table, schema, rows, strategy, batch_size):
+    """Trusted static table/schema names; all event values stay bound parameters."""
+    placeholders = '(' + ','.join('?' for _ in schema) + ')'
+    if strategy == 'executemany':
+        con.executemany(f"INSERT INTO {table} VALUES {placeholders}", rows)
+    else:
+        for start in range(0, len(rows), batch_size):
+            batch = rows[start:start + batch_size]
+            con.execute(f"INSERT INTO {table} VALUES " + ','.join([placeholders] * len(batch)),
+                        [value for row in batch for value in row])
+
+
+def run_pipeline(data: dict, as_of: str, *, timings: dict | None = None,
+                 load_strategy: str = "batched", insert_batch_size: int = 500) -> dict[str, list[dict]]:
     """as_of declares the last fully observed UTC day (inclusive).
 
     Optional timings is replaced only after a successful full rebuild, including
@@ -87,6 +100,10 @@ def run_pipeline(data: dict, as_of: str, *, timings: dict | None = None) -> dict
     """
     if timings is not None and not isinstance(timings, dict):
         raise ValueError("timings must be a dict or None")
+    if load_strategy not in ("executemany", "batched"):
+        raise ValueError("load_strategy must be executemany or batched")
+    if type(insert_batch_size) is not int or not 1 <= insert_batch_size <= 1000:
+        raise ValueError("insert_batch_size must be an integer between 1 and 1000")
     stages = {}
     started = previous = perf_counter() if timings is not None else 0
 
@@ -119,8 +136,9 @@ def run_pipeline(data: dict, as_of: str, *, timings: dict | None = None) -> dict
                 # to preserve raw cardinality without re-parsing timestamps.
                 by_key = {tuple(r[k] for k in KEYS[table]): r for r in rows}
                 raw = [by_key[tuple(r[k] for k in KEYS[table])] for r in data[table]]
-                con.executemany(f"INSERT INTO raw_{table} VALUES ({','.join('?' for _ in schema)})",
-                                [tuple(r[f] for f, _ in schema) for r in raw])
+                _insert_rows(con, f"raw_{table}", schema,
+                             [tuple(r[f] for f, _ in schema) for r in raw],
+                             load_strategy, insert_batch_size)
         mark("raw_load")
         con.execute(files("moba_lab").joinpath("models.sql").read_text())
         mark("sql_models")
