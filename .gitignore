@@ -14,3 +14,6 @@ dbt/logs/
 *.duckdb
 *.duckdb.wal
 .venv-dbt/
+
+# Optional isolated Airflow metadata/logs/artifacts
+.airflow-output/

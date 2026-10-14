@@ -83,3 +83,7 @@ Use a fresh output folder: existing warehouse files are refused. Optional depend
 ## A measured loading change
 
 [Read the interleaved loader experiment](docs/batched-load.md). On a regular 107,500-record synthetic workload, the full-pipeline median fell from 21.626 to 15.379 seconds across three fresh-process pairs (about 29% less elapsed time). All six complete metric outputs match the retained reference loader. Bounded 500-row parameter batches are now the default; reference executemany remains selectable. This is a local measured comparison, not a production throughput claim.
+
+## Actual local Airflow execution
+
+[Run the TaskFlow example](docs/airflow.md): generate synthetic data → build metrics → validate → write a local manifest. Real Airflow DAG.test runs show success, native retry after a transient failure, and bad metrics blocking downstream publication. Each scenario owns fresh local metadata/artifacts. This demonstrates local task dependency/retry execution, without claiming a scheduler or cloud deployment.

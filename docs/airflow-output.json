@@ -1,0 +1,70 @@
+{
+  "airflow_version": "2.11.0",
+  "execution_mode": "actual DAG.test; serialized local tasks, no scheduler/executor service",
+  "metadata": "fresh SQLite database and AIRFLOW_HOME per scenario",
+  "scenarios": {
+    "clean": {
+      "state": "success",
+      "tasks": {
+        "generate_fixture": "success",
+        "build_metrics": "success",
+        "validate_metrics": "success",
+        "publish_local": "success"
+      },
+      "build_attempts": 1,
+      "attempt_numbers": [
+        1
+      ],
+      "published": true,
+      "published_counts": {
+        "user_day": 101,
+        "dau": 14,
+        "retention": 8,
+        "hero_stats": 3,
+        "player_stats": 12,
+        "monetization": 4
+      },
+      "published_revenue_cents": 1396
+    },
+    "transient": {
+      "state": "success",
+      "tasks": {
+        "generate_fixture": "success",
+        "build_metrics": "success",
+        "validate_metrics": "success",
+        "publish_local": "success"
+      },
+      "build_attempts": 2,
+      "attempt_numbers": [
+        1,
+        2
+      ],
+      "published": true,
+      "published_counts": {
+        "user_day": 101,
+        "dau": 14,
+        "retention": 8,
+        "hero_stats": 3,
+        "player_stats": 12,
+        "monetization": 4
+      },
+      "published_revenue_cents": 1396
+    },
+    "bad_metrics": {
+      "state": "failed",
+      "tasks": {
+        "generate_fixture": "success",
+        "build_metrics": "success",
+        "validate_metrics": "failed",
+        "publish_local": "upstream_failed"
+      },
+      "build_attempts": 1,
+      "attempt_numbers": [
+        1
+      ],
+      "published": false,
+      "published_counts": null,
+      "published_revenue_cents": null
+    }
+  }
+}
