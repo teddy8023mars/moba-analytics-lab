@@ -18,6 +18,6 @@ test_recorded_snapshots_equal_canonical_pipeline (test_showcase.ShowcaseTests.te
 test_reproducible_export_and_embedded_offline_data (test_showcase.ShowcaseTests.test_reproducible_export_and_embedded_offline_data) ... ok
 
 ----------------------------------------------------------------------
-Ran 18 tests in 7.188s
+Ran 18 tests in 7.254s
 
 OK

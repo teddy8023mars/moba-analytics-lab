@@ -1,5 +1,5 @@
 """Opt-in actual dbt build: literal expectations, canonical parity and failing data test."""
-import importlib.util
+import importlib.metadata
 import json
 from pathlib import Path
 import subprocess
@@ -9,7 +9,16 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 
-@unittest.skipUnless(importlib.util.find_spec('dbt'), 'optional dbt dependencies not installed')
+def dbt_installed():
+    try:
+        importlib.metadata.version('dbt-core')
+        importlib.metadata.version('dbt-duckdb')
+    except importlib.metadata.PackageNotFoundError:
+        return False
+    return True
+
+
+@unittest.skipUnless(dbt_installed(), 'optional dbt dependencies not installed')
 class DbtIntegrationTests(unittest.TestCase):
     def test_build_parity_boundaries_and_fault_detection(self):
         with tempfile.TemporaryDirectory() as temp:
