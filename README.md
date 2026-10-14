@@ -52,7 +52,7 @@ See [architecture](docs/architecture.md), [metric dictionary and input contract]
 
 ## Scope
 
-This release is a local full rebuild. It provides no real telemetry connector, incremental warehouse load, scheduling orchestration, query-performance evidence or production deployment. The validation checks event integrity, not full MOBA game rules: fixtures use four participants per match and do not model ranked rules or enforce balanced kill/death totals. Reports contain fictional metrics and establish no real business conclusions.
+This release is a local full rebuild. It provides no real telemetry connector, incremental warehouse load, scheduling orchestration, production deployment. The validation checks event integrity, not full MOBA game rules: fixtures use four participants per match and do not model ranked rules or enforce balanced kill/death totals. Reports contain fictional metrics and establish no real business conclusions.
 
 MIT licensed. Remote CI is configured for Python 3.11/3.12; its result must be checked after publication.
 
@@ -71,3 +71,7 @@ PYTHONPATH=src .venv-dbt/bin/python scripts/run_dbt_demo.py --output .dbt-output
 ```
 
 Use a fresh output folder: existing warehouse files are refused. Optional dependencies do not affect the core package. This is executed local dbt transformation and validation, without a scheduler, cloud warehouse or incremental dbt materialization.
+
+## Measured local benchmark
+
+[Reproduce the benchmark and read its limits](docs/benchmark.md). Three fresh-process samples at 2,150 / 21,500 / 107,500 synthetic raw rows record every wall-clock duration and whole-process peak RSS. All samples validate independent workload totals; the original pipeline/model definitions are unchanged. A separate actual query plan illustrates 60 raw login records collapsing to 56 user-days. This evidence measures local full rebuilds, without production capacity or optimization claims.

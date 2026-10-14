@@ -1,0 +1,180 @@
+{
+  "measurement": "validated in-memory full rebuild; fixture generation and imports excluded",
+  "environment": {
+    "os": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "duckdb": "1.4.3",
+    "logical_cpus": 10,
+    "duckdb_default_threads": 10
+  },
+  "rss_scope": "whole child-process peak, including imports, fixture generation, pipeline and correctness checks",
+  "workloads": [
+    {
+      "users": 100,
+      "input_rows": 2150,
+      "correctness": {
+        "user_days": 1400,
+        "dau_per_day": 100,
+        "retention_rows": 2,
+        "revenue_cents": 119800,
+        "transactions": 200
+      },
+      "samples": [
+        {
+          "pid": 73628,
+          "seconds": 0.43301720899762586,
+          "peak_process_rss_bytes": 70615040,
+          "input_rows": 2150,
+          "correctness": {
+            "user_days": 1400,
+            "dau_per_day": 100,
+            "retention_rows": 2,
+            "revenue_cents": 119800,
+            "transactions": 200
+          }
+        },
+        {
+          "pid": 73629,
+          "seconds": 0.44055437500355765,
+          "peak_process_rss_bytes": 72171520,
+          "input_rows": 2150,
+          "correctness": {
+            "user_days": 1400,
+            "dau_per_day": 100,
+            "retention_rows": 2,
+            "revenue_cents": 119800,
+            "transactions": 200
+          }
+        },
+        {
+          "pid": 73630,
+          "seconds": 0.4333447079989128,
+          "peak_process_rss_bytes": 71499776,
+          "input_rows": 2150,
+          "correctness": {
+            "user_days": 1400,
+            "dau_per_day": 100,
+            "retention_rows": 2,
+            "revenue_cents": 119800,
+            "transactions": 200
+          }
+        }
+      ],
+      "seconds_min": 0.43301720899762586,
+      "seconds_median": 0.4333447079989128,
+      "seconds_max": 0.44055437500355765
+    },
+    {
+      "users": 1000,
+      "input_rows": 21500,
+      "correctness": {
+        "user_days": 14000,
+        "dau_per_day": 1000,
+        "retention_rows": 2,
+        "revenue_cents": 1198000,
+        "transactions": 2000
+      },
+      "samples": [
+        {
+          "pid": 73631,
+          "seconds": 4.191482333000749,
+          "peak_process_rss_bytes": 101826560,
+          "input_rows": 21500,
+          "correctness": {
+            "user_days": 14000,
+            "dau_per_day": 1000,
+            "retention_rows": 2,
+            "revenue_cents": 1198000,
+            "transactions": 2000
+          }
+        },
+        {
+          "pid": 73637,
+          "seconds": 4.146858916035853,
+          "peak_process_rss_bytes": 98353152,
+          "input_rows": 21500,
+          "correctness": {
+            "user_days": 14000,
+            "dau_per_day": 1000,
+            "retention_rows": 2,
+            "revenue_cents": 1198000,
+            "transactions": 2000
+          }
+        },
+        {
+          "pid": 73649,
+          "seconds": 4.171563958982006,
+          "peak_process_rss_bytes": 103153664,
+          "input_rows": 21500,
+          "correctness": {
+            "user_days": 14000,
+            "dau_per_day": 1000,
+            "retention_rows": 2,
+            "revenue_cents": 1198000,
+            "transactions": 2000
+          }
+        }
+      ],
+      "seconds_min": 4.146858916035853,
+      "seconds_median": 4.171563958982006,
+      "seconds_max": 4.191482333000749
+    },
+    {
+      "users": 5000,
+      "input_rows": 107500,
+      "correctness": {
+        "user_days": 70000,
+        "dau_per_day": 5000,
+        "retention_rows": 2,
+        "revenue_cents": 5990000,
+        "transactions": 10000
+      },
+      "samples": [
+        {
+          "pid": 73710,
+          "seconds": 20.828696125012357,
+          "peak_process_rss_bytes": 236027904,
+          "input_rows": 107500,
+          "correctness": {
+            "user_days": 70000,
+            "dau_per_day": 5000,
+            "retention_rows": 2,
+            "revenue_cents": 5990000,
+            "transactions": 10000
+          }
+        },
+        {
+          "pid": 73746,
+          "seconds": 20.807589458010625,
+          "peak_process_rss_bytes": 238354432,
+          "input_rows": 107500,
+          "correctness": {
+            "user_days": 70000,
+            "dau_per_day": 5000,
+            "retention_rows": 2,
+            "revenue_cents": 5990000,
+            "transactions": 10000
+          }
+        },
+        {
+          "pid": 73803,
+          "seconds": 20.93668904202059,
+          "peak_process_rss_bytes": 236847104,
+          "input_rows": 107500,
+          "correctness": {
+            "user_days": 70000,
+            "dau_per_day": 5000,
+            "retention_rows": 2,
+            "revenue_cents": 5990000,
+            "transactions": 10000
+          }
+        }
+      ],
+      "seconds_min": 20.807589458010625,
+      "seconds_median": 20.828696125012357,
+      "seconds_max": 20.93668904202059
+    }
+  ]
+}
