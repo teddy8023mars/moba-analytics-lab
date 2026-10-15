@@ -91,3 +91,9 @@ Use a fresh output folder: existing warehouse files are refused. Optional depend
 ### Verify local publication artifacts
 
 [Read-only artifact verification](docs/artifact-verification.md) checks the local Airflow manifest against its metrics bytes, row counts and revenue before consumption. `moba-lab verify --manifest PATH` returns exit0 on consistency or exit2 on failure. Unsigned manifests provide no authentication; this adds no cloud deployment.
+
+### Local partitioned Parquet exercise
+
+[Write and query a user-day snapshot](docs/parquet.md): typed date partitions,
+full readback and DAU reconciliation, plus an actual filter/projection query plan.
+This optional local example adds no cloud deployment or performance claim.

@@ -1,0 +1,63 @@
+test_existing_output_and_broken_symlink_are_refused (test_parquet_snapshot.ParquetSnapshotTests.test_existing_output_and_broken_symlink_are_refused) ... FAIL
+test_hand_computed_roundtrip_dau_and_date_type (test_parquet_snapshot.ParquetSnapshotTests.test_hand_computed_roundtrip_dau_and_date_type) ... FAIL
+test_invalid_input_creates_no_output (test_parquet_snapshot.ParquetSnapshotTests.test_invalid_input_creates_no_output) ... FAIL
+test_quotes_unicode_and_absent_filter (test_parquet_snapshot.ParquetSnapshotTests.test_quotes_unicode_and_absent_filter) ... FAIL
+test_real_seed_demo_and_existing_output_exit (test_parquet_snapshot.ParquetSnapshotTests.test_real_seed_demo_and_existing_output_exit) ... FAIL
+
+======================================================================
+FAIL: test_existing_output_and_broken_symlink_are_refused (test_parquet_snapshot.ParquetSnapshotTests.test_existing_output_and_broken_symlink_are_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 70, in test_existing_output_and_broken_symlink_are_refused
+    export=self.exporter()
+           ^^^^^^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 21, in exporter
+    self.assertTrue(callable(export_user_days), 'Parquet snapshot API is missing')
+AssertionError: False is not true : Parquet snapshot API is missing
+
+======================================================================
+FAIL: test_hand_computed_roundtrip_dau_and_date_type (test_parquet_snapshot.ParquetSnapshotTests.test_hand_computed_roundtrip_dau_and_date_type)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 25, in test_hand_computed_roundtrip_dau_and_date_type
+    export = self.exporter()
+             ^^^^^^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 21, in exporter
+    self.assertTrue(callable(export_user_days), 'Parquet snapshot API is missing')
+AssertionError: False is not true : Parquet snapshot API is missing
+
+======================================================================
+FAIL: test_invalid_input_creates_no_output (test_parquet_snapshot.ParquetSnapshotTests.test_invalid_input_creates_no_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 54, in test_invalid_input_creates_no_output
+    export=self.exporter()
+           ^^^^^^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 21, in exporter
+    self.assertTrue(callable(export_user_days), 'Parquet snapshot API is missing')
+AssertionError: False is not true : Parquet snapshot API is missing
+
+======================================================================
+FAIL: test_quotes_unicode_and_absent_filter (test_parquet_snapshot.ParquetSnapshotTests.test_quotes_unicode_and_absent_filter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 44, in test_quotes_unicode_and_absent_filter
+    export=self.exporter()
+           ^^^^^^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 21, in exporter
+    self.assertTrue(callable(export_user_days), 'Parquet snapshot API is missing')
+AssertionError: False is not true : Parquet snapshot API is missing
+
+======================================================================
+FAIL: test_real_seed_demo_and_existing_output_exit (test_parquet_snapshot.ParquetSnapshotTests.test_real_seed_demo_and_existing_output_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/tests/test_parquet_snapshot.py", line 88, in test_real_seed_demo_and_existing_output_exit
+    self.assertEqual(proc.returncode,0,proc.stdout+proc.stderr)
+AssertionError: 2 != 0 : /Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/../../.fresh-install-audit/2026-10-15T0134/moba-analytics-lab/venv/bin/python: can't open file '/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/parquet-snapshot/scripts/run_parquet_demo.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+FAILED (failures=5)

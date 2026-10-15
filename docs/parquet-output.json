@@ -1,0 +1,94 @@
+{
+  "scope": "local user-day Parquet snapshot experiment",
+  "duckdb_version": "1.4.3",
+  "rows": 101,
+  "partition_count": 14,
+  "files": [
+    "user_day/activity_date=2026-01-01/data_0.parquet",
+    "user_day/activity_date=2026-01-02/data_0.parquet",
+    "user_day/activity_date=2026-01-03/data_0.parquet",
+    "user_day/activity_date=2026-01-04/data_0.parquet",
+    "user_day/activity_date=2026-01-05/data_0.parquet",
+    "user_day/activity_date=2026-01-06/data_0.parquet",
+    "user_day/activity_date=2026-01-07/data_0.parquet",
+    "user_day/activity_date=2026-01-08/data_0.parquet",
+    "user_day/activity_date=2026-01-09/data_0.parquet",
+    "user_day/activity_date=2026-01-10/data_0.parquet",
+    "user_day/activity_date=2026-01-11/data_0.parquet",
+    "user_day/activity_date=2026-01-12/data_0.parquet",
+    "user_day/activity_date=2026-01-13/data_0.parquet",
+    "user_day/activity_date=2026-01-14/data_0.parquet"
+  ],
+  "dau": [
+    {
+      "activity_date": "2026-01-01",
+      "dau": 2
+    },
+    {
+      "activity_date": "2026-01-02",
+      "dau": 4
+    },
+    {
+      "activity_date": "2026-01-03",
+      "dau": 5
+    },
+    {
+      "activity_date": "2026-01-04",
+      "dau": 7
+    },
+    {
+      "activity_date": "2026-01-05",
+      "dau": 7
+    },
+    {
+      "activity_date": "2026-01-06",
+      "dau": 9
+    },
+    {
+      "activity_date": "2026-01-07",
+      "dau": 10
+    },
+    {
+      "activity_date": "2026-01-08",
+      "dau": 9
+    },
+    {
+      "activity_date": "2026-01-09",
+      "dau": 9
+    },
+    {
+      "activity_date": "2026-01-10",
+      "dau": 7
+    },
+    {
+      "activity_date": "2026-01-11",
+      "dau": 10
+    },
+    {
+      "activity_date": "2026-01-12",
+      "dau": 8
+    },
+    {
+      "activity_date": "2026-01-13",
+      "dau": 8
+    },
+    {
+      "activity_date": "2026-01-14",
+      "dau": 6
+    }
+  ],
+  "full_rows_equal": true,
+  "filter_date": "2026-01-08",
+  "filtered_user_ids": [
+    "u00",
+    "u01",
+    "u02",
+    "u03",
+    "u05",
+    "u07",
+    "u09",
+    "u10",
+    "u11"
+  ],
+  "explain": "┌───────────────────────────┐\n│       READ_PARQUET        │\n│    ────────────────────   │\n│         Function:         │\n│        READ_PARQUET       │\n│                           │\n│    Projections: user_id   │\n│                           │\n│       File Filters:       │\n│ (activity_date = '2026-01 │\n│        -08'::DATE)        │\n│                           │\n│    Scanning Files: 1/14   │\n│                           │\n│          ~2 rows          │\n└───────────────────────────┘\n"
+}
