@@ -1,0 +1,54 @@
+{
+  "airflow_version": "2.11.0",
+  "execution_mode": "native Linux scheduler + SequentialExecutor; two @once synthetic DAGs",
+  "scope": "bounded local experiment; no recurring uptime, cloud or HA deployment",
+  "scenarios": {
+    "clean": {
+      "runs": [
+        [
+          "scheduled__2026-01-14T00:00:00+00:00",
+          "scheduled",
+          "success"
+        ]
+      ],
+      "tasks": {
+        "build_metrics": "success",
+        "generate_fixture": "success",
+        "publish_local": "success",
+        "validate_metrics": "success"
+      },
+      "verification": {
+        "status": "verified",
+        "sha256": "8eb6fabf1da5df5718d1b6abb739ba1baca3d7101ea25d4e9ea0127225db57c3",
+        "counts": {
+          "user_day": 101,
+          "dau": 14,
+          "retention": 8,
+          "hero_stats": 3,
+          "player_stats": 12,
+          "monetization": 4
+        },
+        "revenue_cents": 1396
+      }
+    },
+    "bad_metrics": {
+      "runs": [
+        [
+          "scheduled__2026-01-14T00:00:00+00:00",
+          "scheduled",
+          "failed"
+        ]
+      ],
+      "tasks": {
+        "build_metrics": "success",
+        "generate_fixture": "success",
+        "publish_local": "upstream_failed",
+        "validate_metrics": "failed"
+      }
+    }
+  },
+  "cleanup": {
+    "owned_processes_observed": 19,
+    "owned_processes_remaining": []
+  }
+}

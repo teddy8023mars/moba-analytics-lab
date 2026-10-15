@@ -44,3 +44,5 @@ Airflow's own might_contain_dag returned False (RED), then True after adding an
 explicit Airflow DAG import. No discovery safety setting is disabled. Focused six
 tests now pass with two native-Linux skips on macOS. Corrective feature-branch CI
 must establish actual canonical scheduling before main integration.
+
+Corrective feature commit e2cb818: all six Linux CI jobs passed in38749347369. Downloaded archive independently verified exactly one scheduled run per scenario, expected task states, clean metrics hash/counts/revenue1396, bad manifest absence, timeout nonzero/no summary, and cleanup19/1identities with zero remaining. Final guide links actual output and failure history; main integration requires fresh exact-commit CI.

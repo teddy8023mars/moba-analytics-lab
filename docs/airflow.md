@@ -46,7 +46,7 @@ Airflow is first installed with the official version/Python-specific constraints
 
 `publish_local` writes a local JSON manifest with metric-file name, SHA256, row counts and fictional revenue. It publishes nothing to GitHub, a website, a cloud warehouse or another person. JSON artifacts use same-directory temporary files and atomic replacement; there is no fsync/power-loss durability claim. A failed gate leaves the manifest absent. The wrapper's fresh-directory scope prevents stale success artifacts from being mistaken for the failed scenario's output.
 
-The DAG has `schedule=None`, `catchup=False` and local file paths, and is built by a factory for these manual runs. It is not installed as a scheduler-discovered production DAG. DAG.test uses a serialized local execution path, bypassing an executor service. Distributed workers would require a proper shared artifact/object-store design. Scheduler operation, scheduled catchup/backfill, alerts, secrets/IAM, external sources, multi-worker concurrency, AWS and Kafka/Spark remain unimplemented here.
+The DAG has `schedule=None`, `catchup=False` and local file paths, and is built by a factory for these manual runs. It is not installed as a scheduler-discovered production DAG. DAG.test uses a serialized local execution path, bypassing an executor service. Distributed workers would require a proper shared artifact/object-store design. The separate [native Linux scheduler experiment](scheduler.md) now exercises bounded scheduler operation with this same factory. Scheduled catchup/backfill, alerts, secrets/IAM, external sources, multi-worker concurrency, AWS and Kafka/Spark remain unimplemented here.
 
 ## Verification and references
 
