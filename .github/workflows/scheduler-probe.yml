@@ -16,12 +16,24 @@ jobs:
       - run: python -m pip install "apache-airflow==2.11.0" --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.11.0/constraints-3.12.txt
       - run: python -m pip check
       - run: python experiments/scheduler_probe.py --output "${{ runner.temp }}/scheduler-probe"
+      - name: Package evidence (Airflow log paths contain colons)
+        if: always()
+        run: |
+          python - <<'PY'
+          import os, tarfile
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP']) / 'scheduler-probe'
+          if root.is_dir():
+              with tarfile.open(root.with_suffix('.tar.gz'), 'w:gz') as archive:
+                  paths = sorted(root.glob('*.json')) + [root/'scheduler.log', root/'airflow-home/logs']
+                  for path in paths:
+                      if path.exists():
+                          archive.add(path, arcname=str(path.relative_to(root)))
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: disposable-linux-scheduler-evidence
-          path: |
-            ${{ runner.temp }}/scheduler-probe/*.json
-            ${{ runner.temp }}/scheduler-probe/scheduler.log
-            ${{ runner.temp }}/scheduler-probe/airflow-home/logs
+          path: ${{ runner.temp }}/scheduler-probe.tar.gz
+          if-no-files-found: error
           retention-days: 7
