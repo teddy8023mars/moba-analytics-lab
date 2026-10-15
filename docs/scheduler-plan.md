@@ -30,3 +30,17 @@ starts an owned parent and SIGTERM-ignoring child, observes the child's identity
 then verifies kill escalation, parent termination and survival of an unrelated
 sentinel plus a mismatched creation-time entry. Focused local test passed in5.227s;
 native Linux cases remain skipped locally and must pass before main integration.
+
+
+First feature-branch Linux CI38747418450 (654d42b) failed only the native scheduler
+success case: no DAGs discovered, no task attempts, 180-second timeout. Other five
+jobs and scheduler timeout/boundary checks passed. Downloaded actual parser logs
+report zero files; both observed run lists are empty and cleanup left zero of
+three tracked identities. This is not a native MOBA success result.
+
+Root cause: Airflow2.11 default safe-mode discovery requires both airflow and dag
+in wrapper source; this factory wrapper lacked the former. A regression using
+Airflow's own might_contain_dag returned False (RED), then True after adding an
+explicit Airflow DAG import. No discovery safety setting is disabled. Focused six
+tests now pass with two native-Linux skips on macOS. Corrective feature-branch CI
+must establish actual canonical scheduling before main integration.

@@ -1,0 +1,22 @@
+test_actual_scheduled_moba_clean_and_failed_gate (test_scheduler_demo.NativeSchedulerTests.test_actual_scheduled_moba_clean_and_failed_gate) ... skipped 'optional native Linux scheduler integration'
+test_actual_scheduler_timeout_has_cleanup_and_no_success_summary (test_scheduler_demo.NativeSchedulerTests.test_actual_scheduler_timeout_has_cleanup_and_no_success_summary) ... skipped 'optional native Linux scheduler integration'
+test_cleanup_preserves_unrelated_sentinel_and_wrong_process_identity (test_scheduler_demo.SchedulerBoundaryTests.test_cleanup_preserves_unrelated_sentinel_and_wrong_process_identity) ... ok
+test_environment_is_owned_without_modifying_caller (test_scheduler_demo.SchedulerBoundaryTests.test_environment_is_owned_without_modifying_caller) ... ok
+test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) ... ok
+test_generated_dag_is_discoverable_with_airflow_default_safe_mode (test_scheduler_demo.SchedulerBoundaryTests.test_generated_dag_is_discoverable_with_airflow_default_safe_mode) ... FAIL
+
+======================================================================
+FAIL: test_generated_dag_is_discoverable_with_airflow_default_safe_mode (test_scheduler_demo.SchedulerBoundaryTests.test_generated_dag_is_discoverable_with_airflow_default_safe_mode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 36, in test_generated_dag_is_discoverable_with_airflow_default_safe_mode
+    self.assertEqual(proc.stdout.strip().splitlines()[-1], 'True')
+AssertionError: 'False' != 'True'
+- False
++ True
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.665s
+
+FAILED (failures=1, skipped=2)

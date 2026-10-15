@@ -20,6 +20,21 @@ def module():
 
 
 class SchedulerBoundaryTests(unittest.TestCase):
+    @unittest.skipUnless(importlib.util.find_spec('airflow'), 'optional Airflow discovery integration')
+    def test_generated_dag_is_discoverable_with_airflow_default_safe_mode(self):
+        with tempfile.TemporaryDirectory() as name:
+            folder = Path(name)
+            source = folder/'scheduled_moba.py'
+            runner = module()
+            source.write_text(runner.dag_source(folder))
+            code = ('from airflow.utils.file import might_contain_dag; '
+                    f'print(might_contain_dag({str(source)!r}, safe_mode=True))')
+            proc = subprocess.run([sys.executable, '-c', code],
+                                  env=runner.owned_environment(folder, os.environ),
+                                  capture_output=True, text=True, timeout=30)
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            self.assertEqual(proc.stdout.strip().splitlines()[-1], 'True')
+
     def test_existing_directory_file_and_broken_symlink_are_refused(self):
         with tempfile.TemporaryDirectory() as name:
             root = Path(name)

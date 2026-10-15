@@ -115,6 +115,18 @@ def check_results(output, results):
             result['verification'] = checked
 
 
+def dag_source(output):
+    # Keep an explicit Airflow import so default DAG safe-mode discovery sees this factory wrapper.
+    source = ('import sys\nimport pendulum\nfrom airflow import DAG\n'
+              f'sys.path.insert(0, {str(ROOT/"orchestration")!r})\n'
+              'from moba_dag import make_dag\n')
+    for scenario in SCENARIOS:
+        source += (f'{scenario}_dag = make_dag({str(output/scenario)!r}, {scenario!r}, '
+                   f'dag_id={"moba_scheduled_"+scenario!r}, schedule="@once", '
+                   'start_date=pendulum.datetime(2026,1,14,tz="UTC"))\n')
+    return source
+
+
 def run_demo(output, timeout=180):
     output = output.absolute()
     if output.exists() or output.is_symlink():
@@ -133,14 +145,7 @@ def run_demo(output, timeout=180):
     with (output/'init.log').open('w') as log:
         subprocess.run([sys.executable,'-c','from airflow.utils import db; db.initdb(load_connections=False)'],
                        cwd=output, env=env, stdout=log, stderr=subprocess.STDOUT, timeout=60, check=True)
-    source = ('import sys\nimport pendulum\n'
-              f'sys.path.insert(0, {str(ROOT/"orchestration")!r})\n'
-              'from moba_dag import make_dag\n')
-    for scenario in SCENARIOS:
-        source += (f'{scenario}_dag = make_dag({str(output/scenario)!r}, {scenario!r}, '
-                   f'dag_id={"moba_scheduled_"+scenario!r}, schedule="@once", '
-                   'start_date=pendulum.datetime(2026,1,14,tz="UTC"))\n')
-    (dags/'scheduled_moba.py').write_text(source)
+    (dags/'scheduled_moba.py').write_text(dag_source(output))
     results = {}; cleanup = None
     with (output/'scheduler.log').open('w') as log:
         proc = subprocess.Popen([sys.executable,'-m','airflow','scheduler','--skip-serve-logs','--num-runs','300'],
