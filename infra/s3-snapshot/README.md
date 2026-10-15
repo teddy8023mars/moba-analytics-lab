@@ -10,7 +10,8 @@ remains local; this module does not upload it.
 ## Reproduce the checks
 
 Install Terraform **1.12.2** and Python3.11+; the committed lockfile pins AWS
-provider **5.100.0**. These are reproducibility pins, not a latest-version claim.
+provider **5.100.0**. These are reproducibility pins, not a latest-version claim. Provider checksums
+cover macOS arm64 and Linux amd64; other platforms have not been validated.
 From the repository root:
 
 ```sh
@@ -91,3 +92,15 @@ not ask for that approval or claim deployment readiness.
 
 References: [Terraform provider mocking](https://developer.hashicorp.com/terraform/language/tests/mocking),
 [pinned AWS provider documentation](https://github.com/hashicorp/terraform-provider-aws/tree/v5.100.0/website/docs/r).
+
+### First remote lockfile failure and correction
+
+The initial macOS-generated lockfile had signed archive checksums but only a
+macOS package-content hash. On Ubuntu, read-only init installed the signed Linux
+provider and warned it could not add the platform hash; subsequent validate
+[failed its package checksum check](../../docs/s3-ci-checksum-failure.txt).
+Terraform's native `providers lock -platform=darwin_arm64 -platform=linux_amd64`
+[fetched both signed platform packages](../../docs/s3-provider-platform-lock.txt)
+and added the Linux package-content hash. Read-only initialization remains enabled;
+checks are not bypassed. Remote Linux verification must be repeated on the corrected
+commit; local macOS success alone cannot prove that fix on Linux.
