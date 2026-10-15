@@ -61,3 +61,40 @@ jobs:
         with:
           name: s3-mock-plan-evidence
           path: ${{ runner.temp }}/s3-evidence
+  scheduler-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "apache-airflow==2.11.0" --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.11.0/constraints-3.12.txt
+      - run: python -m pip install -r requirements-airflow.txt .
+      - run: python -m pip check
+      - run: python -m unittest discover -s tests -p test_scheduler_demo.py -v
+        env:
+          PYTHONPATH: src
+          RUN_SCHEDULER_INTEGRATION: '1'
+          SCHEDULER_EVIDENCE_DIR: ${{ runner.temp }}/scheduler-evidence
+      - name: Archive owned evidence without config or SQLite
+        if: always()
+        run: |
+          python - <<'PY'
+          import os, tarfile
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])/'scheduler-evidence'
+          if root.is_dir():
+              with tarfile.open(root.with_suffix('.tar.gz'), 'w:gz') as archive:
+                  for path in sorted(root.rglob('*')):
+                      if path.is_file() and not path.is_symlink() and path.suffix in ('.json', '.jsonl', '.log'):
+                          archive.add(path, arcname=str(path.relative_to(root)), recursive=False)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-scheduler-evidence
+          path: ${{ runner.temp }}/scheduler-evidence.tar.gz
+          if-no-files-found: error

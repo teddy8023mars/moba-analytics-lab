@@ -1,0 +1,65 @@
+test_actual_scheduled_moba_clean_and_failed_gate (test_scheduler_demo.NativeSchedulerTests.test_actual_scheduled_moba_clean_and_failed_gate) ... skipped 'optional native Linux scheduler integration'
+test_actual_scheduler_timeout_has_cleanup_and_no_success_summary (test_scheduler_demo.NativeSchedulerTests.test_actual_scheduler_timeout_has_cleanup_and_no_success_summary) ... skipped 'optional native Linux scheduler integration'
+test_cleanup_preserves_unrelated_sentinel_and_wrong_process_identity (test_scheduler_demo.SchedulerBoundaryTests.test_cleanup_preserves_unrelated_sentinel_and_wrong_process_identity) ... ERROR
+test_environment_is_owned_without_modifying_caller (test_scheduler_demo.SchedulerBoundaryTests.test_environment_is_owned_without_modifying_caller) ... ERROR
+test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) ...
+  test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) (output='existing') ... FAIL
+  test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) (output='file') ... FAIL
+  test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) (output='broken') ... FAIL
+
+======================================================================
+ERROR: test_cleanup_preserves_unrelated_sentinel_and_wrong_process_identity (test_scheduler_demo.SchedulerBoundaryTests.test_cleanup_preserves_unrelated_sentinel_and_wrong_process_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 62, in test_cleanup_preserves_unrelated_sentinel_and_wrong_process_identity
+    runner = module()
+             ^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 18, in module
+    spec.loader.exec_module(loaded)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/scripts/run_scheduler_demo.py'
+
+======================================================================
+ERROR: test_environment_is_owned_without_modifying_caller (test_scheduler_demo.SchedulerBoundaryTests.test_environment_is_owned_without_modifying_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 42, in test_environment_is_owned_without_modifying_caller
+    runner = module()
+             ^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 18, in module
+    spec.loader.exec_module(loaded)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/scripts/run_scheduler_demo.py'
+
+======================================================================
+FAIL: test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) (output='existing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 35, in test_existing_directory_file_and_broken_symlink_are_refused
+    self.assertIn('fresh output', proc.stderr)
+AssertionError: 'fresh output' not found in "/Users/teddy/Desktop/My Resume/portfolio-projects/.airflow-runtime/bin/python: can't open file '/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/scripts/run_scheduler_demo.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) (output='file')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 35, in test_existing_directory_file_and_broken_symlink_are_refused
+    self.assertIn('fresh output', proc.stderr)
+AssertionError: 'fresh output' not found in "/Users/teddy/Desktop/My Resume/portfolio-projects/.airflow-runtime/bin/python: can't open file '/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/scripts/run_scheduler_demo.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_existing_directory_file_and_broken_symlink_are_refused (test_scheduler_demo.SchedulerBoundaryTests.test_existing_directory_file_and_broken_symlink_are_refused) (output='broken')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/tests/test_scheduler_demo.py", line 35, in test_existing_directory_file_and_broken_symlink_are_refused
+    self.assertIn('fresh output', proc.stderr)
+AssertionError: 'fresh output' not found in "/Users/teddy/Desktop/My Resume/portfolio-projects/.airflow-runtime/bin/python: can't open file '/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/moba-scheduler/scripts/run_scheduler_demo.py': [Errno 2] No such file or directory\n"
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.062s
+
+FAILED (failures=3, errors=2, skipped=2)

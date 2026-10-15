@@ -1,4 +1,4 @@
-"""Factory for a local, manually tested Airflow DAG; no scheduler deployment."""
+"""Synthetic local DAG factory shared by DAG.test and the bounded scheduler demo."""
 from datetime import date, timedelta
 import hashlib
 import json
@@ -19,14 +19,14 @@ def atomic_json(path, value):
     return str(path)
 
 
-def make_dag(folder, scenario):
+def make_dag(folder, scenario, *, dag_id='moba_portfolio_local', schedule=None, start_date=None):
     folder=Path(folder).resolve()
     if scenario not in ('clean','transient','bad_metrics'):
         raise ValueError('unknown scenario')
     folder.mkdir(parents=True,exist_ok=True)
 
-    @dag(dag_id='moba_portfolio_local',schedule=None,catchup=False,
-         start_date=pendulum.datetime(2026,1,1,tz='UTC'),max_active_runs=1,
+    @dag(dag_id=dag_id,schedule=schedule,catchup=False,
+         start_date=start_date or pendulum.datetime(2026,1,1,tz='UTC'),max_active_runs=1,
          default_args={'owner':'portfolio','retries':0},tags=['synthetic','local-demo'])
     def pipeline():
         @task
