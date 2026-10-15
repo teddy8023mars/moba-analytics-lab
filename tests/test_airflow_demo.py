@@ -50,6 +50,15 @@ class AirflowDemoTests(unittest.TestCase):
                 self.assertEqual(run['published_counts'],{'user_day':101,'dau':14,'retention':8,
                     'hero_stats':3,'player_stats':12,'monetization':4})
                 self.assertEqual(run['published_revenue_cents'],1396)
+                from moba_lab.artifacts import verify_manifest
+                manifest=Path(temp)/mode/'artifacts/published.json'
+                checked=verify_manifest(manifest)
+                self.assertEqual(checked['status'],'verified')
+                self.assertEqual(checked['revenue_cents'],1396)
+                metrics=manifest.parent/'metrics.json'
+                metrics.write_bytes(metrics.read_bytes()+b' ')
+                with self.assertRaisesRegex(ValueError,'SHA256 mismatch'):
+                    verify_manifest(manifest)
             bad=report['scenarios']['bad_metrics']
             self.assertEqual(bad['state'],'failed')
             self.assertEqual(bad['tasks'],{'generate_fixture':'success','build_metrics':'success',

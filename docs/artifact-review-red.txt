@@ -1,0 +1,92 @@
+test_deep_duplicate_and_nonfinite_json_exit_cleanly (test_artifacts.ArtifactTests.test_deep_duplicate_and_nonfinite_json_exit_cleanly) ... 
+  test_deep_duplicate_and_nonfinite_json_exit_cleanly (test_artifacts.ArtifactTests.test_deep_duplicate_and_nonfinite_json_exit_cleanly) (manifest='deep') ... FAIL
+  test_deep_duplicate_and_nonfinite_json_exit_cleanly (test_artifacts.ArtifactTests.test_deep_duplicate_and_nonfinite_json_exit_cleanly) (prefix=b'[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[') ... FAIL
+  test_deep_duplicate_and_nonfinite_json_exit_cleanly (test_artifacts.ArtifactTests.test_deep_duplicate_and_nonfinite_json_exit_cleanly) (prefix=b'{"user_day": [], "dau": [{"value": 1e999') ... FAIL
+test_malformed_manifest_and_missing_manifest_exit_cleanly (test_artifacts.ArtifactTests.test_malformed_manifest_and_missing_manifest_exit_cleanly) ... ok
+test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) ... ok
+test_matching_artifact_cli_is_read_only (test_artifacts.ArtifactTests.test_matching_artifact_cli_is_read_only) ... ok
+test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) ... ok
+test_modified_or_missing_metrics_fail (test_artifacts.ArtifactTests.test_modified_or_missing_metrics_fail) ... ok
+test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) ... ok
+
+======================================================================
+FAIL: test_deep_duplicate_and_nonfinite_json_exit_cleanly (test_artifacts.ArtifactTests.test_deep_duplicate_and_nonfinite_json_exit_cleanly) (manifest='deep')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 113, in test_deep_duplicate_and_nonfinite_json_exit_cleanly
+    self.assertEqual(result.returncode, 2, result.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/__main__.py", line 2, in <module>
+    main()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/cli.py", line 45, in main
+    print(json.dumps(verify_manifest(args.manifest), sort_keys=True))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/artifacts.py", line 36, in verify_manifest
+    manifest = _json(path.read_bytes())
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/artifacts.py", line 26, in _json
+    return json.loads(raw.decode('utf-8'), object_pairs_hook=_object, parse_constant=invalid_constant)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+
+
+======================================================================
+FAIL: test_deep_duplicate_and_nonfinite_json_exit_cleanly (test_artifacts.ArtifactTests.test_deep_duplicate_and_nonfinite_json_exit_cleanly) (prefix=b'[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 122, in test_deep_duplicate_and_nonfinite_json_exit_cleanly
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 37, in rejected
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/__main__.py", line 2, in <module>
+    main()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/cli.py", line 45, in main
+    print(json.dumps(verify_manifest(args.manifest), sort_keys=True))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/artifacts.py", line 60, in verify_manifest
+    metrics = _json(raw)
+              ^^^^^^^^^^
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/src/moba_lab/artifacts.py", line 26, in _json
+    return json.loads(raw.decode('utf-8'), object_pairs_hook=_object, parse_constant=invalid_constant)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/teddy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+
+
+======================================================================
+FAIL: test_deep_duplicate_and_nonfinite_json_exit_cleanly (test_artifacts.ArtifactTests.test_deep_duplicate_and_nonfinite_json_exit_cleanly) (prefix=b'{"user_day": [], "dau": [{"value": 1e999')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 122, in test_deep_duplicate_and_nonfinite_json_exit_cleanly
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 37, in rejected
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+AssertionError: 0 != 2 : {"counts": {"dau": 1, "hero_stats": 0, "monetization": 2, "player_stats": 0, "retention": 0, "user_day": 0}, "revenue_cents": 200, "sha256": "65b4b6da94e4aae46fd830fbff2cda5e3d4b58280b82ff167f1e3160ff01e0eb", "status": "verified"}
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.322s
+
+FAILED (failures=3)

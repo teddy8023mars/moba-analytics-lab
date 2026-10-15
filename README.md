@@ -87,3 +87,7 @@ Use a fresh output folder: existing warehouse files are refused. Optional depend
 ## Actual local Airflow execution
 
 [Run the TaskFlow example](docs/airflow.md): generate synthetic data → build metrics → validate → write a local manifest. Real Airflow DAG.test runs show success, native retry after a transient failure, and bad metrics blocking downstream publication. Each scenario owns fresh local metadata/artifacts. This demonstrates local task dependency/retry execution, without claiming a scheduler or cloud deployment.
+
+### Verify local publication artifacts
+
+[Read-only artifact verification](docs/artifact-verification.md) checks the local Airflow manifest against its metrics bytes, row counts and revenue before consumption. `moba-lab verify --manifest PATH` returns exit0 on consistency or exit2 on failure. Unsigned manifests provide no authentication; this adds no cloud deployment.

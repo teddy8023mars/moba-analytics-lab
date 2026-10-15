@@ -3,6 +3,7 @@ import csv
 from html import escape
 import json
 from pathlib import Path
+from .artifacts import verify_manifest
 from .fixtures import generate_fixture
 from .pipeline import METRICS, run_pipeline
 
@@ -31,6 +32,8 @@ def main():
     run.add_argument("--input", type=Path, required=True)
     run.add_argument("--as-of", required=True, help="last fully observed UTC day, YYYY-MM-DD")
     run.add_argument("--output", type=Path, required=True)
+    verify = sub.add_parser("verify", help="check local publication bytes and summary")
+    verify.add_argument("--manifest", type=Path, required=True)
     args = parser.parse_args()
     try:
         if args.command == "generate":
@@ -38,10 +41,13 @@ def main():
             data = generate_fixture(args.seed)
             args.output.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
             print(json.dumps({k: len(v) for k, v in data.items()}, sort_keys=True))
+        elif args.command == "verify":
+            print(json.dumps(verify_manifest(args.manifest), sort_keys=True))
         else:
             metrics = run_pipeline(json.loads(args.input.read_text(encoding="utf-8")), args.as_of)
             write_reports(metrics, args.output)
             (args.output / "run.json").write_text(json.dumps({"as_of_utc": args.as_of, "synthetic": True, "rows": {k: len(v) for k, v in metrics.items()}}, indent=2) + "\n")
             print(json.dumps({k: len(v) for k, v in metrics.items()}, sort_keys=True))
     except (ValueError, OSError) as exc:
-        parser.exit(2, f"error: {exc}\n")
+        prefix = "artifact verification failed" if args.command == "verify" else "error"
+        parser.exit(2, f"{prefix}: {exc}\n")

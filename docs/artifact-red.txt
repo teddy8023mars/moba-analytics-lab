@@ -1,0 +1,248 @@
+test_malformed_manifest_and_missing_manifest_exit_cleanly (test_artifacts.ArtifactTests.test_malformed_manifest_and_missing_manifest_exit_cleanly) ... FAIL
+test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) ... 
+  test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'revenue_cents': 201}) ... FAIL
+  test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'revenue_cents': True}) ... FAIL
+  test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'sha256': 'not-a-hash'}) ... FAIL
+  test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'counts': {'user_day': 0, 'dau': True, 'retention': 0, 'hero_stats': 0, 'player_stats': 0, 'monetization': 2}}) ... FAIL
+  test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'counts': {'user_day': 0, 'dau': 1, 'retention': 0, 'hero_stats': 0, 'player_stats': 0, 'monetization': 2}}) ... FAIL
+  test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'metrics_file': None}) ... FAIL
+test_matching_artifact_cli_is_read_only (test_artifacts.ArtifactTests.test_matching_artifact_cli_is_read_only) ... FAIL
+test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) ... 
+  test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value=[]) ... FAIL
+  test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'dau': []}) ... FAIL
+  test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': {}, 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': 125}, {'revenue_cents': 75}]}) ... FAIL
+  test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': [1], 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': 125}, {'revenue_cents': 75}]}) ... FAIL
+  test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': [], 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': True}]}) ... FAIL
+  test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': [], 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': -1}]}) ... FAIL
+test_modified_or_missing_metrics_fail (test_artifacts.ArtifactTests.test_modified_or_missing_metrics_fail) ... FAIL
+test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) ... 
+  test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='../outside.json') ... FAIL
+  test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='/tmp/outside.json') ... FAIL
+  test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='..') ... FAIL
+  test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='.') ... FAIL
+  test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='sub/metrics.json') ... FAIL
+  test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='sub\\metrics.json') ... FAIL
+test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) ... FAIL
+
+======================================================================
+FAIL: test_malformed_manifest_and_missing_manifest_exit_cleanly (test_artifacts.ArtifactTests.test_malformed_manifest_and_missing_manifest_exit_cleanly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 95, in test_malformed_manifest_and_missing_manifest_exit_cleanly
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'revenue_cents': 201})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 65, in test_manifest_summary_and_types_are_checked
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'revenue_cents': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 65, in test_manifest_summary_and_types_are_checked
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'sha256': 'not-a-hash'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 65, in test_manifest_summary_and_types_are_checked
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'counts': {'user_day': 0, 'dau': True, 'retention': 0, 'hero_stats': 0, 'player_stats': 0, 'monetization': 2}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 65, in test_manifest_summary_and_types_are_checked
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'counts': {'user_day': 0, 'dau': 1, 'retention': 0, 'hero_stats': 0, 'player_stats': 0, 'monetization': 2}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 65, in test_manifest_summary_and_types_are_checked
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_manifest_summary_and_types_are_checked (test_artifacts.ArtifactTests.test_manifest_summary_and_types_are_checked) (change={'metrics_file': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 65, in test_manifest_summary_and_types_are_checked
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_matching_artifact_cli_is_read_only (test_artifacts.ArtifactTests.test_matching_artifact_cli_is_read_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 44, in test_matching_artifact_cli_is_read_only
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 2 != 0 : usage: __main__.py [-h] {generate,run} ...
+__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)
+
+
+======================================================================
+FAIL: test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 86, in test_matching_hash_does_not_hide_malformed_metrics
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'dau': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 86, in test_matching_hash_does_not_hide_malformed_metrics
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': {}, 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': 125}, {'revenue_cents': 75}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 86, in test_matching_hash_does_not_hide_malformed_metrics
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': [1], 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': 125}, {'revenue_cents': 75}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 86, in test_matching_hash_does_not_hide_malformed_metrics
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': [], 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': True}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 86, in test_matching_hash_does_not_hide_malformed_metrics
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_matching_hash_does_not_hide_malformed_metrics (test_artifacts.ArtifactTests.test_matching_hash_does_not_hide_malformed_metrics) (value={'user_day': [], 'dau': [], 'retention': [], 'hero_stats': [], 'player_stats': [], 'monetization': [{'revenue_cents': -1}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 86, in test_matching_hash_does_not_hide_malformed_metrics
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_modified_or_missing_metrics_fail (test_artifacts.ArtifactTests.test_modified_or_missing_metrics_fail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 54, in test_modified_or_missing_metrics_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='../outside.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 72, in test_unsafe_paths_and_symlink_target_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='/tmp/outside.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 72, in test_unsafe_paths_and_symlink_target_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='..')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 72, in test_unsafe_paths_and_symlink_target_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 72, in test_unsafe_paths_and_symlink_target_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='sub/metrics.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 72, in test_unsafe_paths_and_symlink_target_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail) (name='sub\\metrics.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 72, in test_unsafe_paths_and_symlink_target_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+======================================================================
+FAIL: test_unsafe_paths_and_symlink_target_fail (test_artifacts.ArtifactTests.test_unsafe_paths_and_symlink_target_fail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 76, in test_unsafe_paths_and_symlink_target_fail
+    self.rejected()
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/artifact-verification/tests/test_artifacts.py", line 38, in rejected
+    self.assertIn('artifact verification failed', result.stderr)
+AssertionError: 'artifact verification failed' not found in "usage: __main__.py [-h] {generate,run} ...\n__main__.py: error: argument command: invalid choice: 'verify' (choose from generate, run)\n"
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.963s
+
+FAILED (failures=22)
