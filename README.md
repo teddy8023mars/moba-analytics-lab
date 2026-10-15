@@ -97,3 +97,9 @@ Use a fresh output folder: existing warehouse files are refused. Optional depend
 [Write and query a user-day snapshot](docs/parquet.md): typed date partitions,
 full readback and DAU reconciliation, plus an actual filter/projection query plan.
 This optional local example adds no cloud deployment or performance claim.
+
+### Optional S3 configuration, without deployment
+
+[Terraform configuration and eight mocked plan checks](infra/s3-snapshot/README.md)
+cover private storage settings and a prefix-scoped reader-policy document. Actual
+validation and failure-mutation evidence is linked; no AWS resources were created.

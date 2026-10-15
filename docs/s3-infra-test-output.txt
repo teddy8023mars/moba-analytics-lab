@@ -1,0 +1,13 @@
+tests/snapshot.tftest.hcl... in progress
+  run "guardrails"... pass
+  run "tls_deny"... pass
+  run "reader_scope"... pass
+  run "custom_prefix"... pass
+  run "invalid_bucket"... pass
+  run "wildcard_prefix"... pass
+  run "root_prefix"... pass
+  run "traversal_prefix"... pass
+tests/snapshot.tftest.hcl... tearing down
+tests/snapshot.tftest.hcl... pass
+
+Success! 8 passed, 0 failed.

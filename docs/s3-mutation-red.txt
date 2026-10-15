@@ -1,0 +1,49 @@
+tests/snapshot.tftest.hcl... in progress
+  run "guardrails"... fail
+  run "tls_deny"... pass
+  run "reader_scope"... pass
+  run "custom_prefix"... pass
+  run "invalid_bucket"... pass
+  run "wildcard_prefix"... pass
+  run "root_prefix"... pass
+  run "traversal_prefix"... pass
+tests/snapshot.tftest.hcl... tearing down
+tests/snapshot.tftest.hcl... fail
+
+Failure! 7 passed, 1 failed.
+
+Error: Test assertion failed
+
+  on tests/snapshot.tftest.hcl line 8, in run "guardrails":
+   8:     condition = (
+   9:       !aws_s3_bucket.snapshot.force_destroy &&
+  10:       aws_s3_bucket_public_access_block.snapshot.block_public_acls &&
+  11:       aws_s3_bucket_public_access_block.snapshot.block_public_policy &&
+  12:       aws_s3_bucket_public_access_block.snapshot.ignore_public_acls &&
+  13:       aws_s3_bucket_public_access_block.snapshot.restrict_public_buckets &&
+  14:       one(aws_s3_bucket_server_side_encryption_configuration.snapshot.rule).apply_server_side_encryption_by_default[0].sse_algorithm == "AES256" &&
+  15:       aws_s3_bucket_versioning.snapshot.versioning_configuration[0].status == "Enabled" &&
+  16:       aws_s3_bucket_ownership_controls.snapshot.rule[0].object_ownership == "BucketOwnerEnforced"
+  17:     )
+    ├────────────────
+    │ aws_s3_bucket.snapshot.force_destroy is false
+    │ aws_s3_bucket_ownership_controls.snapshot.rule[0].object_ownership is "BucketOwnerEnforced"
+    │ aws_s3_bucket_public_access_block.snapshot.block_public_acls is true
+    │ aws_s3_bucket_public_access_block.snapshot.block_public_policy is false
+    │ aws_s3_bucket_public_access_block.snapshot.ignore_public_acls is true
+    │ aws_s3_bucket_public_access_block.snapshot.restrict_public_buckets is true
+    │ aws_s3_bucket_server_side_encryption_configuration.snapshot.rule is [
+    │     {
+    │       "apply_server_side_encryption_by_default": [
+    │         {
+    │           "kms_master_key_id": null,
+    │           "sse_algorithm": "AES256"
+    │         }
+    │       ],
+    │       "bucket_key_enabled": null
+    │     }
+    │   ]
+    │ aws_s3_bucket_versioning.snapshot.versioning_configuration[0].status is "Enabled"
+
+Snapshot plan must retain destruction, public-access, encryption, versioning
+and ownership safeguards.

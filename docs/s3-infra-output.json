@@ -1,0 +1,57 @@
+{
+  "scope": "configuration validation and mocked provider plans only; no AWS deployment",
+  "status": "passed",
+  "steps": [
+    {
+      "name": "version",
+      "command": [
+        "terraform",
+        "version",
+        "-json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "format",
+      "command": [
+        "terraform",
+        "fmt",
+        "-check",
+        "-recursive"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "init",
+      "command": [
+        "terraform",
+        "init",
+        "-backend=false",
+        "-input=false",
+        "-lockfile=readonly",
+        "-no-color"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "validate",
+      "command": [
+        "terraform",
+        "validate",
+        "-no-color"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "mock-test",
+      "command": [
+        "terraform",
+        "test",
+        "-no-color"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "terraform_version": "1.12.2",
+  "mock_plan_cases_passed": 8
+}

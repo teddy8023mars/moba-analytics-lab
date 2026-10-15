@@ -1,0 +1,77 @@
+tests/snapshot.tftest.hcl... in progress
+  run "guardrails"... fail
+  run "tls_deny"... skip
+  run "reader_scope"... skip
+  run "custom_prefix"... skip
+  run "invalid_bucket"... skip
+  run "wildcard_prefix"... skip
+  run "root_prefix"... skip
+  run "traversal_prefix"... skip
+tests/snapshot.tftest.hcl... tearing down
+tests/snapshot.tftest.hcl... fail
+
+Failure! 0 passed, 1 failed, 7 skipped.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 9, in run "guardrails":
+   9:       !aws_s3_bucket.snapshot.force_destroy &&
+
+A managed resource "aws_s3_bucket" "snapshot" has not been declared in the
+root module.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 10, in run "guardrails":
+  10:       aws_s3_bucket_public_access_block.snapshot.block_public_acls &&
+
+A managed resource "aws_s3_bucket_public_access_block" "snapshot" has not
+been declared in the root module.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 11, in run "guardrails":
+  11:       aws_s3_bucket_public_access_block.snapshot.block_public_policy &&
+
+A managed resource "aws_s3_bucket_public_access_block" "snapshot" has not
+been declared in the root module.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 12, in run "guardrails":
+  12:       aws_s3_bucket_public_access_block.snapshot.ignore_public_acls &&
+
+A managed resource "aws_s3_bucket_public_access_block" "snapshot" has not
+been declared in the root module.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 13, in run "guardrails":
+  13:       aws_s3_bucket_public_access_block.snapshot.restrict_public_buckets &&
+
+A managed resource "aws_s3_bucket_public_access_block" "snapshot" has not
+been declared in the root module.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 14, in run "guardrails":
+  14:       one(aws_s3_bucket_server_side_encryption_configuration.snapshot.rule).apply_server_side_encryption_by_default[0].sse_algorithm == "AES256" &&
+
+A managed resource "aws_s3_bucket_server_side_encryption_configuration"
+"snapshot" has not been declared in the root module.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 15, in run "guardrails":
+  15:       aws_s3_bucket_versioning.snapshot.versioning_configuration[0].status == "Enabled" &&
+
+A managed resource "aws_s3_bucket_versioning" "snapshot" has not been
+declared in the root module.
+
+Error: Reference to undeclared resource
+
+  on tests/snapshot.tftest.hcl line 16, in run "guardrails":
+  16:       aws_s3_bucket_ownership_controls.snapshot.rule[0].object_ownership == "BucketOwnerEnforced"
+
+A managed resource "aws_s3_bucket_ownership_controls" "snapshot" has not been
+declared in the root module.

@@ -42,3 +42,22 @@ jobs:
       - run: python -m unittest discover -s tests -v
         env:
           PYTHONPATH: src
+  s3-mock-plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: '1.12.2'
+          terraform_wrapper: false
+      - run: python scripts/check_s3_infra.py --output "${{ runner.temp }}/s3-evidence"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-mock-plan-evidence
+          path: ${{ runner.temp }}/s3-evidence

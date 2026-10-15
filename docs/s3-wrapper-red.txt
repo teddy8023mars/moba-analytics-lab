@@ -1,0 +1,14 @@
+test_isolation_removes_credentials_and_terraform_overrides (test_s3_wrapper.S3WrapperTests.test_isolation_removes_credentials_and_terraform_overrides) ... FAIL
+
+======================================================================
+FAIL: test_isolation_removes_credentials_and_terraform_overrides (test_s3_wrapper.S3WrapperTests.test_isolation_removes_credentials_and_terraform_overrides)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/teddy/Desktop/My Resume/portfolio-projects/.implementation-worktrees/s3-infra/tests/test_s3_wrapper.py", line 11, in test_isolation_removes_credentials_and_terraform_overrides
+    self.assertTrue(path.exists(),'offline infrastructure wrapper is missing')
+AssertionError: False is not true : offline infrastructure wrapper is missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
