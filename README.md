@@ -52,9 +52,9 @@ See [architecture](docs/architecture.md), [metric dictionary and input contract]
 
 ## Scope
 
-This release is a local full rebuild. It provides no real telemetry connector, incremental warehouse load, scheduling orchestration, production deployment. The validation checks event integrity, not full MOBA game rules: fixtures use four participants per match and do not model ranked rules or enforce balanced kill/death totals. Reports contain fictional metrics and establish no real business conclusions.
+This release is a local full rebuild, with optional dbt and bounded Airflow examples described below. It provides no real telemetry connector, incremental warehouse load or production deployment. The validation checks event integrity, not full MOBA game rules: fixtures use four participants per match and do not model ranked rules or enforce balanced kill/death totals. Reports contain fictional metrics and establish no real business conclusions.
 
-MIT licensed. Remote CI is configured for Python 3.11/3.12; its result must be checked after publication.
+MIT licensed. Remote CI runs on Python 3.11/3.12, with separate optional integration jobs. See the repository's [actual workflow runs](https://github.com/teddy8023mars/moba-analytics-lab/actions/workflows/ci.yml) for commit-specific results.
 
 ## Role alignment
 
