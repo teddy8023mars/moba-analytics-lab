@@ -1,0 +1,27 @@
+name: disposable Linux scheduler probe
+on:
+  push:
+    branches: [probe/scheduler-linux]
+permissions:
+  contents: read
+jobs:
+  scheduler-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "apache-airflow==2.11.0" --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.11.0/constraints-3.12.txt
+      - run: python -m pip check
+      - run: python experiments/scheduler_probe.py --output "${{ runner.temp }}/scheduler-probe"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: disposable-linux-scheduler-evidence
+          path: |
+            ${{ runner.temp }}/scheduler-probe/*.json
+            ${{ runner.temp }}/scheduler-probe/scheduler.log
+            ${{ runner.temp }}/scheduler-probe/airflow-home/logs
+          retention-days: 7
